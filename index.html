@@ -1,605 +1,1142 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Allahverdi Hasanov — AI-Assisted Website Builder</title>
-  <meta name="description" content="AI-assisted web builder creating modern, responsive websites and digital experiences for small businesses and personal brands." />
-  <link rel="canonical" href="https://allahverdi-dev.github.io/portfolio/" />
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Allahverdi Hasanov — AI-Assisted Website Builder</title>
+    <meta
+      name="description"
+      content="AI-assisted web builder creating modern, responsive websites and digital experiences for small businesses and personal brands."
+    />
+    <link rel="canonical" href="https://allahverdi-dev.github.io/portfolio/" />
 
-  <!-- Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Allahverdi Hasanov" />
-  <meta property="og:title" content="Allahverdi Hasanov — AI-Assisted Website Builder" />
-  <meta property="og:description" content="AI-assisted web builder creating modern, responsive websites and digital experiences for small businesses and personal brands." />
-  <meta property="og:url" content="https://allahverdi-dev.github.io/portfolio/" />
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Allahverdi Hasanov" />
+    <meta
+      property="og:title"
+      content="Allahverdi Hasanov — AI-Assisted Website Builder"
+    />
+    <meta
+      property="og:description"
+      content="AI-assisted web builder creating modern, responsive websites and digital experiences for small businesses and personal brands."
+    />
+    <meta
+      property="og:url"
+      content="https://allahverdi-dev.github.io/portfolio/"
+    />
 
-  <!-- Twitter / X -->
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Allahverdi Hasanov — AI-Assisted Website Builder" />
-  <meta name="twitter:description" content="AI-assisted web builder creating modern, responsive websites and digital experiences for small businesses and personal brands." />
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary" />
+    <meta
+      name="twitter:title"
+      content="Allahverdi Hasanov — AI-Assisted Website Builder"
+    />
+    <meta
+      name="twitter:description"
+      content="AI-assisted web builder creating modern, responsive websites and digital experiences for small businesses and personal brands."
+    />
 
-  <meta name="theme-color" content="#f9f9f7" media="(prefers-color-scheme: light)" />
-  <meta name="theme-color" content="#121413" media="(prefers-color-scheme: dark)" />
-  <meta name="color-scheme" content="light dark" />
+    <meta
+      name="theme-color"
+      content="#f9f9f7"
+      media="(prefers-color-scheme: light)"
+    />
+    <meta
+      name="theme-color"
+      content="#121413"
+      media="(prefers-color-scheme: dark)"
+    />
+    <meta name="color-scheme" content="light dark" />
 
-  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Libre+Caslon+Text:ital@0;1&display=swap"
-    rel="stylesheet"
-  />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Libre+Caslon+Text:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
 
-  <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css" />
 
-  <!-- Inline theme bootstrap: avoids a flash of the wrong theme on load -->
-  <script>
-    (function () {
-      try {
-        var stored = localStorage.getItem("theme");
-        if (stored === "light" || stored === "dark") {
-          document.documentElement.setAttribute("data-theme", stored);
-        }
-      } catch (e) {}
-    })();
-  </script>
-</head>
-<body>
-  <a class="skip-link" href="#main">Skip to content</a>
+    <!-- Inline theme bootstrap: avoids a flash of the wrong theme on load -->
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem("theme");
+          if (stored === "light" || stored === "dark") {
+            document.documentElement.setAttribute("data-theme", stored);
+          }
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-  <header class="site-header">
-    <div class="container site-header__inner">
-      <a class="brand" href="#top" aria-label="Allahverdi Hasanov — home">
-        <span class="brand__mark" aria-hidden="true">AH</span>
-        <span class="brand__name">Allahverdi Hasanov</span>
-      </a>
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a class="brand" href="#top" aria-label="Allahverdi Hasanov — home">
+          <span class="brand__mark" aria-hidden="true">AH</span>
+          <span class="brand__name">Allahverdi Hasanov</span>
+        </a>
 
-      <nav class="nav" aria-label="Primary">
-        <div class="nav__links" id="nav-links" data-open="false">
-          <a class="nav__link" href="#top" aria-current="page">Home</a>
-          <a class="nav__link" href="#work">Work</a>
-          <a class="nav__link" href="#services">Services</a>
-          <a class="nav__link" href="#about">About</a>
-          <a class="nav__link" href="#contact">Contact</a>
-        </div>
-
-        <div class="header-actions">
-          <a class="icon-btn" href="https://github.com/allahverdi-dev" target="_blank" rel="noopener noreferrer" aria-label="Allahverdi Hasanov on GitHub (opens in a new tab)">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.5a9.5 9.5 0 0 0-3 18.52c.48.09.66-.21.66-.47v-1.65c-2.69.58-3.26-1.14-3.26-1.14-.44-1.12-1.08-1.42-1.08-1.42-.88-.6.07-.59.07-.59.97.07 1.48 1 1.48 1 .87 1.49 2.29 1.06 2.85.81.09-.63.34-1.06.62-1.3-2.15-.24-4.41-1.08-4.41-4.8 0-1.06.38-1.93 1-2.61-.1-.25-.43-1.24.1-2.58 0 0 .82-.26 2.67 1a9.25 9.25 0 0 1 4.86 0c1.85-1.26 2.67-1 2.67-1 .53 1.34.2 2.33.1 2.58.62.68 1 1.55 1 2.61 0 3.73-2.27 4.55-4.43 4.79.35.3.66.88.66 1.77v2.63c0 .26.17.57.67.47A9.5 9.5 0 0 0 12 2.5Z"/></svg>
-          </a>
-
-          <button class="icon-btn theme-toggle" id="theme-toggle" type="button" aria-label="Toggle light and dark theme">
-            <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2.5M12 19.5V22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M2 12h2.5M19.5 12H22M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg>
-            <svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.6 6.6 0 0 0 10.5 10.5Z"/></svg>
-          </button>
-
-          <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle menu">
-            <span class="menu-toggle__bar"></span>
-          </button>
-        </div>
-      </nav>
-    </div>
-  </header>
-
-  <main id="main">
-    <div id="top"></div>
-
-    <!-- Hero -->
-    <section class="hero container">
-      <div class="hero__grid">
-        <div>
-          <p class="hero__kicker"><span class="status-dot" aria-hidden="true"></span> Available for new projects</p>
-          <h1 class="hero__title">Modern websites built for <em>real businesses.</em></h1>
-          <p class="hero__quote">I design and build clean, responsive websites for small businesses, personal brands, and growing ideas using a modern AI-assisted development workflow.</p>
-          <p class="hero__lede">Fast, functional, and tailored to your needs.</p>
-          <div class="hero__actions">
-            <a class="btn btn--primary" href="#contact">Start a Project</a>
-            <a class="btn btn--secondary" href="#work">View My Work</a>
+        <nav class="nav" aria-label="Primary">
+          <div class="nav__links" id="nav-links" data-open="false">
+            <a class="nav__link" href="#top" aria-current="page">Home</a>
+            <a class="nav__link" href="#work">Work</a>
+            <a class="nav__link" href="#services">Services</a>
+            <a class="nav__link" href="#about">About</a>
+            <a class="nav__link" href="#contact">Contact</a>
           </div>
-        </div>
 
-        <div class="hero__status">
-          <span class="hero__status-label">Independent web builder</span>
-          <span class="hero__status-value">Clear scope. Responsive implementation. Practical delivery.</span>
-          <span class="hero__status-value hero__status-value--muted">Based in Lankaran, Azerbaijan</span>
-        </div>
-      </div>
-    </section>
+          <div class="header-actions">
+            <a
+              class="icon-btn"
+              href="https://github.com/allahverdi-dev"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Allahverdi Hasanov on GitHub (opens in a new tab)"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  fill="currentColor"
+                  d="M12 2.5a9.5 9.5 0 0 0-3 18.52c.48.09.66-.21.66-.47v-1.65c-2.69.58-3.26-1.14-3.26-1.14-.44-1.12-1.08-1.42-1.08-1.42-.88-.6.07-.59.07-.59.97.07 1.48 1 1.48 1 .87 1.49 2.29 1.06 2.85.81.09-.63.34-1.06.62-1.3-2.15-.24-4.41-1.08-4.41-4.8 0-1.06.38-1.93 1-2.61-.1-.25-.43-1.24.1-2.58 0 0 .82-.26 2.67 1a9.25 9.25 0 0 1 4.86 0c1.85-1.26 2.67-1 2.67-1 .53 1.34.2 2.33.1 2.58.62.68 1 1.55 1 2.61 0 3.73-2.27 4.55-4.43 4.79.35.3.66.88.66 1.77v2.63c0 .26.17.57.67.47A9.5 9.5 0 0 0 12 2.5Z"
+                />
+              </svg>
+            </a>
 
-    <aside class="trust-strip" aria-label="Website service qualities">
-      <div class="container trust-strip__inner">
-        <span>Responsive Design</span>
-        <span>Modern UI</span>
-        <span>Mobile First</span>
-        <span>Fast Deployment</span>
-        <span>Clear Scope</span>
-      </div>
-    </aside>
+            <button
+              class="icon-btn theme-toggle"
+              id="theme-toggle"
+              type="button"
+              aria-label="Toggle light and dark theme"
+            >
+              <svg
+                class="sun-icon"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+              >
+                <circle cx="12" cy="12" r="4" />
+                <path
+                  d="M12 2v2.5M12 19.5V22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M2 12h2.5M19.5 12H22M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"
+                />
+              </svg>
+              <svg
+                class="moon-icon"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.6 6.6 0 0 0 10.5 10.5Z"
+                />
+              </svg>
+            </button>
 
-    <!-- Selected Work -->
-    <section class="section" id="work">
-      <div class="container">
-        <div class="section-heading section-heading--split">
-          <div class="section-heading__group">
-            <span class="section-index">01</span>
-            <h2 class="section-title">Selected work</h2>
+            <button
+              class="menu-toggle"
+              id="menu-toggle"
+              type="button"
+              aria-expanded="false"
+              aria-controls="nav-links"
+              aria-label="Toggle menu"
+            >
+              <span class="menu-toggle__bar"></span>
+            </button>
           </div>
-          <span class="section-index">01 — 04</span>
-        </div>
-
-        <div class="work-list">
-
-          <!-- 01 LangArt -->
-          <article class="work-item work-item--priority-1">
-            <div class="work-item__media">
-              <div class="frame">
-                <div class="frame__bar" aria-hidden="true"><span class="frame__dot"></span><span class="frame__dot"></span><span class="frame__dot"></span></div>
-                <img src="images/projects/langart-cover.jpg" width="1600" height="800" loading="lazy" decoding="async" alt="LangArt teacher dashboard with class progress charts, next to the student home screen showing a continue-lesson card and vocabulary review." />
-              </div>
-            </div>
-            <div class="work-item__content">
-              <span class="work-item__index">01/</span>
-              <h3 class="work-item__title">LangArt</h3>
-              <p class="work-item__type">EdTech learning platform · Frontend product</p>
-              <p class="work-item__desc">A polished learning platform with dedicated student and teacher experiences — lesson flows, vocabulary tools, progress tracking, scheduling and assignments — built through structured prompting and AI-assisted implementation.</p>
-              <ul class="work-item__highlights">
-                <li>Teacher &amp; student dashboards</li>
-                <li>Lesson &amp; vocabulary tools</li>
-                <li>Scheduling &amp; assignments</li>
-                <li>Responsive, accessible UI</li>
-              </ul>
-              <div class="tag-row">
-                <span class="tag">React</span>
-                <span class="tag">TypeScript</span>
-                <span class="tag">Vite</span>
-                <span class="tag">Tailwind CSS</span>
-              </div>
-              <div class="link-row">
-                <a class="text-link" href="https://langart-beta.vercel.app/" target="_blank" rel="noopener noreferrer">Live<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
-                <a class="text-link" href="https://verdihesenov.gumroad.com/l/langart-edtech" target="_blank" rel="noopener noreferrer">Product page<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
-              </div>
-              <p class="work-item__note">Frontend product/template — not backed by a public repository, production backend, or live database.</p>
-            </div>
-          </article>
-
-          <!-- 02 CineScope -->
-          <article class="work-item work-item--priority-4">
-            <div class="work-item__media">
-              <div class="frame">
-                <div class="frame__bar" aria-hidden="true"><span class="frame__dot"></span><span class="frame__dot"></span><span class="frame__dot"></span></div>
-                <img src="images/projects/cinescope-cover.jpg" width="1600" height="1000" loading="lazy" decoding="async" alt="CineScope home screen in dark mode, showing a featured film hero banner and a row of trending movie posters." />
-              </div>
-            </div>
-            <div class="work-item__content">
-              <span class="work-item__index">04/</span>
-              <h3 class="work-item__title">CineScope</h3>
-              <p class="work-item__type">Movie discovery web application</p>
-              <p class="work-item__desc">A cinematic movie discovery experience with trending titles, rich search and filtering, detailed movie pages, and a personal watchlist.</p>
-              <ul class="work-item__highlights">
-                <li>Trending, search &amp; filters</li>
-                <li>Movie details, cast &amp; trailers</li>
-                <li>Watchlist saved in the browser</li>
-                <li>Light &amp; dark themes</li>
-              </ul>
-              <div class="tag-row">
-                <span class="tag">HTML</span>
-                <span class="tag">CSS</span>
-                <span class="tag">JavaScript</span>
-                <span class="tag">TMDB API</span>
-              </div>
-              <div class="link-row">
-                <a class="text-link" href="https://cinescope.allahverdihesenov42.workers.dev/" target="_blank" rel="noopener noreferrer">Live<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
-                <a class="text-link" href="https://github.com/allahverdi-dev/cinescope" target="_blank" rel="noopener noreferrer">GitHub<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
-              </div>
-              <p class="work-item__note">TMDB requests are proxied through a Cloudflare Worker, so the API credential never reaches the browser.</p>
-            </div>
-          </article>
-
-          <!-- 03 Finora -->
-          <article class="work-item work-item--priority-2">
-            <div class="work-item__media">
-              <div class="frame">
-                <div class="frame__bar" aria-hidden="true"><span class="frame__dot"></span><span class="frame__dot"></span><span class="frame__dot"></span></div>
-                <div class="frame__swap">
-                  <img data-mode="light" src="images/projects/finora-light.jpg" width="1600" height="1000" loading="lazy" decoding="async" alt="Finora dashboard in light mode, showing income, expenses, balance, savings goal progress and a spending breakdown chart." />
-                  <img data-mode="dark" src="images/projects/finora-dark.jpg" width="1600" height="1000" loading="lazy" decoding="async" alt="Finora dashboard in dark mode, showing income, expenses, balance, savings goal progress and a spending breakdown chart." />
-                </div>
-              </div>
-            </div>
-            <div class="work-item__content">
-              <span class="work-item__index">02/</span>
-              <h3 class="work-item__title">Finora</h3>
-              <p class="work-item__type">Local-first personal finance dashboard</p>
-              <p class="work-item__desc"><em>Understand where your money goes. Plan what comes next.</em> A privacy-first finance dashboard for transactions, budgets, recurring payments, and savings goals — with no backend and no bank connections.</p>
-              <ul class="work-item__highlights">
-                <li>Transactions, budgets &amp; recurring bills</li>
-                <li>Savings goals &amp; analytics</li>
-                <li>JSON &amp; CSV import / export</li>
-                <li>228 automated tests passing</li>
-              </ul>
-              <div class="tag-row">
-                <span class="tag">HTML</span>
-                <span class="tag">CSS</span>
-                <span class="tag">Vanilla JS</span>
-                <span class="tag">IndexedDB</span>
-              </div>
-              <div class="link-row">
-                <a class="text-link" href="https://allahverdi-dev.github.io/finora/" target="_blank" rel="noopener noreferrer">Live<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
-                <a class="text-link" href="https://github.com/allahverdi-dev/finora" target="_blank" rel="noopener noreferrer">GitHub<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
-              </div>
-              <p class="work-item__note">No backend, no cloud database, no bank integrations — everything stays on-device.</p>
-            </div>
-          </article>
-
-          <!-- 04 Nota Workspace -->
-          <article class="work-item work-item--reverse work-item--priority-3">
-            <div class="work-item__media">
-              <div class="frame">
-                <div class="frame__bar" aria-hidden="true"><span class="frame__dot"></span><span class="frame__dot"></span><span class="frame__dot"></span></div>
-                <div class="frame__swap">
-                  <img data-mode="light" src="images/projects/nota-light.jpg" width="1426" height="891" loading="lazy" decoding="async" alt="Nota Workspace in light mode, showing the library sidebar with folders and tags beside a list of notes with tags and timestamps." />
-                  <img data-mode="dark" src="images/projects/nota-dark.jpg" width="1426" height="891" loading="lazy" decoding="async" alt="Nota Workspace in dark mode, showing the library sidebar with folders and tags beside a list of notes with tags and timestamps." />
-                </div>
-              </div>
-            </div>
-            <div class="work-item__content">
-              <span class="work-item__index">03/</span>
-              <h3 class="work-item__title">Nota Workspace</h3>
-              <p class="work-item__type">Local-first notes &amp; knowledge workspace</p>
-              <p class="work-item__desc">A private, browser-based workspace for notes, ideas and tasks — folders, tags, favorites, a command palette and keyboard shortcuts, with everything kept on-device.</p>
-              <ul class="work-item__highlights">
-                <li>Rich editing, folders &amp; tags</li>
-                <li>Command palette &amp; shortcuts</li>
-                <li>Light, dark &amp; system themes</li>
-                <li>59 automated browser checks</li>
-              </ul>
-              <div class="tag-row">
-                <span class="tag">HTML</span>
-                <span class="tag">CSS</span>
-                <span class="tag">Vanilla JS</span>
-                <span class="tag">IndexedDB</span>
-              </div>
-              <div class="link-row">
-                <a class="text-link" href="https://allahverdi-dev.github.io/nota-workspace/" target="_blank" rel="noopener noreferrer">Live<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
-                <a class="text-link" href="https://github.com/allahverdi-dev/nota-workspace" target="_blank" rel="noopener noreferrer">GitHub<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
-              </div>
-              <p class="work-item__note">No backend, no accounts — notes are stored locally in your browser.</p>
-            </div>
-          </article>
-
-        </div>
+        </nav>
       </div>
-    </section>
+    </header>
 
-    <!-- Services -->
-    <section class="section services" id="services">
-      <div class="container">
-        <div class="section-heading section-heading--split">
-          <div class="section-heading__group">
-            <span class="section-index">02</span>
-            <h2 class="section-title">Services &amp; pricing</h2>
-          </div>
-          <span class="section-index">Starting points, not fixed quotes</span>
-        </div>
-        <p class="section-lede">Clear, focused website packages for small businesses, personal brands, products, and growing ideas.</p>
+    <main id="main">
+      <div id="top"></div>
 
-        <div class="services-grid">
-          <article class="service-card">
-            <p class="service-card__eyebrow">01 / Single page</p>
-            <h3>Landing Pages</h3>
-            <p class="service-card__desc">Focused, modern single-page websites for products, services, campaigns and personal brands.</p>
-            <p class="service-card__price"><span>Starting at</span> $99</p>
-            <ul class="service-card__list">
-              <li>1 page with essential content sections</li>
-              <li>Responsive layout and CTA sections</li>
-              <li>Basic SEO setup</li>
-              <li>Contact integration where agreed</li>
-              <li>Deployment and 2 revision rounds</li>
-            </ul>
-            <a class="btn btn--secondary" href="#contact" data-project-type="Landing Page">Discuss a landing page</a>
-          </article>
-
-          <article class="service-card">
-            <p class="service-card__eyebrow">02 / Up to 5 pages</p>
-            <h3>Business Websites</h3>
-            <p class="service-card__desc">Professional multi-page websites for small businesses that need a stronger online presence.</p>
-            <p class="service-card__price"><span>Starting at</span> $249</p>
-            <ul class="service-card__list">
-              <li>Up to 5 responsive pages</li>
-              <li>Tailored UI and contact functionality</li>
-              <li>Social links and basic SEO</li>
-              <li>Deployment and 2 revision rounds</li>
-            </ul>
-            <a class="btn btn--secondary" href="#contact" data-project-type="Business Website">Discuss a business site</a>
-          </article>
-
-          <article class="service-card">
-            <p class="service-card__eyebrow">03 / Up to 8 pages</p>
-            <h3>Premium Websites</h3>
-            <p class="service-card__desc">More complete web experiences for businesses and personal brands that need a polished, interactive presence.</p>
-            <p class="service-card__price"><span>Starting at</span> $399</p>
-            <ul class="service-card__list">
-              <li>Up to 8 pages with enhanced layouts</li>
-              <li>Appropriate interactions and tasteful animation</li>
-              <li>Contact functionality and basic SEO</li>
-              <li>Performance-conscious implementation</li>
-              <li>Deployment and 2 revision rounds</li>
-            </ul>
-            <a class="btn btn--secondary" href="#contact" data-project-type="Premium Website">Discuss a premium site</a>
-          </article>
-        </div>
-
-        <div class="redesign-block">
+      <!-- Hero -->
+      <section class="hero container">
+        <div class="hero__grid">
           <div>
-            <p class="service-card__eyebrow">Website redesign</p>
-            <h3>Already have a website?</h3>
-            <p>If your current website feels outdated, difficult to use, or weak on mobile, I can help redesign the experience while keeping the focus on your business goals.</p>
-            <p class="redesign-block__price">Starting from $100.</p>
-          </div>
-          <div class="redesign-block__actions">
-            <a class="btn btn--primary" href="#contact" data-project-type="Website Redesign">Improve My Website</a>
-            <ul class="add-on-list" aria-label="Optional website add-ons">
-              <li>Additional page — from $40</li>
-              <li>Basic SEO setup — $50</li>
-              <li>Content upload — from $30</li>
-              <li>Rush delivery — from $50</li>
-              <li>Monthly maintenance — from $49/month</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- How I Build -->
-    <section class="section" id="process">
-      <div class="container">
-        <div class="section-heading">
-          <span class="section-index">03</span>
-          <h2 class="section-title">The process</h2>
-        </div>
-        <p class="section-lede">A clear five-step path from the first conversation to a working website.</p>
-
-        <div class="process-grid">
-          <div class="process-step">
-            <span class="process-step__index">01</span>
-            <div>
-              <h3 class="process-step__title">Understand</h3>
-              <p class="process-step__desc">Define the business, audience, goals, scope and requirements.</p>
-            </div>
-          </div>
-          <div class="process-step">
-            <span class="process-step__index">02</span>
-            <div>
-              <h3 class="process-step__title">Plan</h3>
-              <p class="process-step__desc">Define the structure, visual direction and required interactions.</p>
-            </div>
-          </div>
-          <div class="process-step">
-            <span class="process-step__index">03</span>
-            <div>
-              <h3 class="process-step__title">Build</h3>
-              <p class="process-step__desc">Implement the approved direction with modern frontend technologies and an AI-assisted workflow.</p>
-            </div>
-          </div>
-          <div class="process-step">
-            <span class="process-step__index">04</span>
-            <div>
-              <h3 class="process-step__title">Refine</h3>
-              <p class="process-step__desc">Test responsive behaviour, validate functionality and refine the work based on feedback.</p>
-            </div>
-          </div>
-          <div class="process-step">
-            <span class="process-step__index">05</span>
-            <div>
-              <h3 class="process-step__title">Launch</h3>
-              <p class="process-step__desc">Perform final checks, deploy the website and complete handover.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- About -->
-    <section class="section about" id="about">
-      <div class="container">
-        <div class="about__grid">
-          <figure class="about__portrait">
-            <img
-              src="images/portrait.jpg"
-              width="900"
-              height="1125"
-              loading="lazy"
-              decoding="async"
-              alt="Allahverdi Hasanov at his desk, wearing glasses and a dark overshirt, with code editors open on the monitors behind him."
-            />
-            <figcaption class="about__portrait-meta">
-              <span>Lankaran, Azerbaijan</span>
-              <span>AI-Assisted Website Builder</span>
-            </figcaption>
-          </figure>
-          <div>
-            <span class="eyebrow">04 / About</span>
-            <h2 class="about__title">Building, learning and shipping.</h2>
-            <p class="about__body">
-              I'm Allahverdi Hasanov, an AI-assisted web builder focused on turning ideas into working digital products. My approach blends foundational web knowledge with modern workflows. I work across product direction, UI/UX decisions and implementation, with a focus on understanding how to build, review, test, debug and improve what gets built.
+            <p class="hero__kicker">
+              <span class="status-dot" aria-hidden="true"></span> Available for
+              new projects
             </p>
-            <p class="about__quote">My current focus is creating useful web experiences while continuing to develop my frontend skills.</p>
-            <div class="about__tags">
-              <span class="tag">HTML &amp; CSS</span>
-              <span class="tag">JavaScript</span>
-              <span class="tag">React</span>
-              <span class="tag">Tailwind CSS</span>
-              <span class="tag">Git &amp; GitHub</span>
+            <h1 class="hero__title">
+              Modern websites built for <em>real businesses.</em>
+            </h1>
+            <p class="hero__quote">
+              I design and build clean, responsive websites for small
+              businesses, personal brands, and growing ideas using a modern
+              AI-assisted development workflow.
+            </p>
+            <p class="hero__lede">
+              Fast, functional, and tailored to your needs.
+            </p>
+            <div class="hero__actions">
+              <a class="btn btn--primary" href="#contact">Start a Project</a>
+              <a class="btn btn--secondary" href="#work">View My Work</a>
             </div>
-            <div class="workflow-note">
-              <h3>How I build, with AI assistance</h3>
-              <p>I use tools such as Claude Code and Google Stitch to accelerate research, implementation and iteration. AI assists the workflow, while every delivered project still requires review, testing, debugging and refinement. The focus is the quality of the finished product, not the novelty of the tools.</p>
-              <ul aria-label="AI-assisted workflow stages">
-                <li>Planning</li><li>Implementation</li><li>Review</li><li>Iteration</li>
+          </div>
+
+          <div class="hero__status">
+            <span class="hero__status-label">Independent web builder</span>
+            <span class="hero__status-value"
+              >Clear scope. Responsive implementation. Practical delivery.</span
+            >
+            <span class="hero__status-value hero__status-value--muted"
+              >Based in Lankaran, Azerbaijan</span
+            >
+          </div>
+        </div>
+      </section>
+
+      <aside class="trust-strip" aria-label="Website service qualities">
+        <div class="container trust-strip__inner">
+          <span>Responsive Design</span>
+          <span>Modern UI</span>
+          <span>Mobile First</span>
+          <span>Fast Deployment</span>
+          <span>Clear Scope</span>
+        </div>
+      </aside>
+
+      <!-- Selected Work -->
+      <section class="section" id="work">
+        <div class="container">
+          <div class="section-heading section-heading--split">
+            <div class="section-heading__group">
+              <span class="section-index">01</span>
+              <h2 class="section-title">Selected work</h2>
+            </div>
+            <span class="section-index">01 — 04</span>
+          </div>
+
+          <div class="work-list">
+            <!-- 01 LangArt -->
+            <article class="work-item work-item--priority-1">
+              <div class="work-item__media">
+                <div class="frame">
+                  <div class="frame__bar" aria-hidden="true">
+                    <span class="frame__dot"></span
+                    ><span class="frame__dot"></span
+                    ><span class="frame__dot"></span>
+                  </div>
+                  <img
+                    src="images/projects/langart-cover.jpg"
+                    width="1600"
+                    height="800"
+                    loading="lazy"
+                    decoding="async"
+                    alt="LangArt teacher dashboard with class progress charts, next to the student home screen showing a continue-lesson card and vocabulary review."
+                  />
+                </div>
+              </div>
+              <div class="work-item__content">
+                <span class="work-item__index">01/</span>
+                <h3 class="work-item__title">LangArt</h3>
+                <p class="work-item__type">
+                  EdTech learning platform · Frontend product
+                </p>
+                <p class="work-item__desc">
+                  A polished learning platform with dedicated student and
+                  teacher experiences — lesson flows, vocabulary tools, progress
+                  tracking, scheduling and assignments — built through
+                  structured prompting and AI-assisted implementation.
+                </p>
+                <ul class="work-item__highlights">
+                  <li>Teacher &amp; student dashboards</li>
+                  <li>Lesson &amp; vocabulary tools</li>
+                  <li>Scheduling &amp; assignments</li>
+                  <li>Responsive, accessible UI</li>
+                </ul>
+                <div class="tag-row">
+                  <span class="tag">React</span>
+                  <span class="tag">TypeScript</span>
+                  <span class="tag">Vite</span>
+                  <span class="tag">Tailwind CSS</span>
+                </div>
+                <div class="link-row">
+                  <a
+                    class="text-link"
+                    href="https://langart-beta.vercel.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Live<svg
+                      viewBox="0 0 24 24"
+                      aria-hidden="true"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M7 17 17 7M9 7h8v8" /></svg
+                  ></a>
+                  <a
+                    class="text-link"
+                    href="https://verdihesenov.gumroad.com/l/langart-edtech"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Product page<svg
+                      viewBox="0 0 24 24"
+                      aria-hidden="true"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M7 17 17 7M9 7h8v8" /></svg
+                  ></a>
+                </div>
+                <p class="work-item__note">
+                  Frontend product/template — not backed by a public repository,
+                  production backend, or live database.
+                </p>
+              </div>
+            </article>
+
+            <!-- 02 CineScope -->
+            <article class="work-item work-item--priority-4">
+              <div class="work-item__media">
+                <div class="frame">
+                  <div class="frame__bar" aria-hidden="true">
+                    <span class="frame__dot"></span
+                    ><span class="frame__dot"></span
+                    ><span class="frame__dot"></span>
+                  </div>
+                  <img
+                    src="images/projects/cinescope-cover.jpg"
+                    width="1600"
+                    height="1000"
+                    loading="lazy"
+                    decoding="async"
+                    alt="CineScope home screen in dark mode, showing a featured film hero banner and a row of trending movie posters."
+                  />
+                </div>
+              </div>
+              <div class="work-item__content">
+                <span class="work-item__index">04/</span>
+                <h3 class="work-item__title">CineScope</h3>
+                <p class="work-item__type">Movie discovery web application</p>
+                <p class="work-item__desc">
+                  A cinematic movie discovery experience with trending titles,
+                  rich search and filtering, detailed movie pages, and a
+                  personal watchlist.
+                </p>
+                <ul class="work-item__highlights">
+                  <li>Trending, search &amp; filters</li>
+                  <li>Movie details, cast &amp; trailers</li>
+                  <li>Watchlist saved in the browser</li>
+                  <li>Light &amp; dark themes</li>
+                </ul>
+                <div class="tag-row">
+                  <span class="tag">HTML</span>
+                  <span class="tag">CSS</span>
+                  <span class="tag">JavaScript</span>
+                  <span class="tag">TMDB API</span>
+                </div>
+                <div class="link-row">
+                  <a
+                    class="text-link"
+                    href="https://cinescope.allahverdihesenov42.workers.dev/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Live<svg
+                      viewBox="0 0 24 24"
+                      aria-hidden="true"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M7 17 17 7M9 7h8v8" /></svg
+                  ></a>
+                  <a
+                    class="text-link"
+                    href="https://github.com/allahverdi-dev/cinescope"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >GitHub<svg
+                      viewBox="0 0 24 24"
+                      aria-hidden="true"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M7 17 17 7M9 7h8v8" /></svg
+                  ></a>
+                </div>
+                <p class="work-item__note">
+                  TMDB requests are proxied through a Cloudflare Worker, so the
+                  API credential never reaches the browser.
+                </p>
+              </div>
+            </article>
+
+            <!-- 03 Finora -->
+            <article class="work-item work-item--priority-2">
+              <div class="work-item__media">
+                <div class="frame">
+                  <div class="frame__bar" aria-hidden="true">
+                    <span class="frame__dot"></span
+                    ><span class="frame__dot"></span
+                    ><span class="frame__dot"></span>
+                  </div>
+                  <div class="frame__swap">
+                    <img
+                      data-mode="light"
+                      src="images/projects/finora-light.jpg"
+                      width="1600"
+                      height="1000"
+                      loading="lazy"
+                      decoding="async"
+                      alt="Finora dashboard in light mode, showing income, expenses, balance, savings goal progress and a spending breakdown chart."
+                    />
+                    <img
+                      data-mode="dark"
+                      src="images/projects/finora-dark.jpg"
+                      width="1600"
+                      height="1000"
+                      loading="lazy"
+                      decoding="async"
+                      alt="Finora dashboard in dark mode, showing income, expenses, balance, savings goal progress and a spending breakdown chart."
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="work-item__content">
+                <span class="work-item__index">02/</span>
+                <h3 class="work-item__title">Finora</h3>
+                <p class="work-item__type">
+                  Local-first personal finance dashboard
+                </p>
+                <p class="work-item__desc">
+                  <em
+                    >Understand where your money goes. Plan what comes next.</em
+                  >
+                  A privacy-first finance dashboard for transactions, budgets,
+                  recurring payments, and savings goals — with no backend and no
+                  bank connections.
+                </p>
+                <ul class="work-item__highlights">
+                  <li>Transactions, budgets &amp; recurring bills</li>
+                  <li>Savings goals &amp; analytics</li>
+                  <li>JSON &amp; CSV import / export</li>
+                  <li>228 automated tests passing</li>
+                </ul>
+                <div class="tag-row">
+                  <span class="tag">HTML</span>
+                  <span class="tag">CSS</span>
+                  <span class="tag">Vanilla JS</span>
+                  <span class="tag">IndexedDB</span>
+                </div>
+                <div class="link-row">
+                  <a
+                    class="text-link"
+                    href="https://allahverdi-dev.github.io/finora/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Live<svg
+                      viewBox="0 0 24 24"
+                      aria-hidden="true"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M7 17 17 7M9 7h8v8" /></svg
+                  ></a>
+                  <a
+                    class="text-link"
+                    href="https://github.com/allahverdi-dev/finora"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >GitHub<svg
+                      viewBox="0 0 24 24"
+                      aria-hidden="true"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M7 17 17 7M9 7h8v8" /></svg
+                  ></a>
+                </div>
+                <p class="work-item__note">
+                  No backend, no cloud database, no bank integrations —
+                  everything stays on-device.
+                </p>
+              </div>
+            </article>
+
+            <!-- 04 Nota Workspace -->
+            <article class="work-item work-item--reverse work-item--priority-3">
+              <div class="work-item__media">
+                <div class="frame">
+                  <div class="frame__bar" aria-hidden="true">
+                    <span class="frame__dot"></span
+                    ><span class="frame__dot"></span
+                    ><span class="frame__dot"></span>
+                  </div>
+                  <div class="frame__swap">
+                    <img
+                      data-mode="light"
+                      src="images/projects/nota-light.jpg"
+                      width="1426"
+                      height="891"
+                      loading="lazy"
+                      decoding="async"
+                      alt="Nota Workspace in light mode, showing the library sidebar with folders and tags beside a list of notes with tags and timestamps."
+                    />
+                    <img
+                      data-mode="dark"
+                      src="images/projects/nota-dark.jpg"
+                      width="1426"
+                      height="891"
+                      loading="lazy"
+                      decoding="async"
+                      alt="Nota Workspace in dark mode, showing the library sidebar with folders and tags beside a list of notes with tags and timestamps."
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="work-item__content">
+                <span class="work-item__index">03/</span>
+                <h3 class="work-item__title">Nota Workspace</h3>
+                <p class="work-item__type">
+                  Local-first notes &amp; knowledge workspace
+                </p>
+                <p class="work-item__desc">
+                  A private, browser-based workspace for notes, ideas and tasks
+                  — folders, tags, favorites, a command palette and keyboard
+                  shortcuts, with everything kept on-device.
+                </p>
+                <ul class="work-item__highlights">
+                  <li>Rich editing, folders &amp; tags</li>
+                  <li>Command palette &amp; shortcuts</li>
+                  <li>Light, dark &amp; system themes</li>
+                  <li>59 automated browser checks</li>
+                </ul>
+                <div class="tag-row">
+                  <span class="tag">HTML</span>
+                  <span class="tag">CSS</span>
+                  <span class="tag">Vanilla JS</span>
+                  <span class="tag">IndexedDB</span>
+                </div>
+                <div class="link-row">
+                  <a
+                    class="text-link"
+                    href="https://allahverdi-dev.github.io/nota-workspace/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Live<svg
+                      viewBox="0 0 24 24"
+                      aria-hidden="true"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M7 17 17 7M9 7h8v8" /></svg
+                  ></a>
+                  <a
+                    class="text-link"
+                    href="https://github.com/allahverdi-dev/nota-workspace"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >GitHub<svg
+                      viewBox="0 0 24 24"
+                      aria-hidden="true"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M7 17 17 7M9 7h8v8" /></svg
+                  ></a>
+                </div>
+                <p class="work-item__note">
+                  No backend, no accounts — notes are stored locally in your
+                  browser.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services -->
+      <section class="section services" id="services">
+        <div class="container">
+          <div class="section-heading section-heading--split">
+            <div class="section-heading__group">
+              <span class="section-index">02</span>
+              <h2 class="section-title">Services &amp; pricing</h2>
+            </div>
+            <span class="section-index">Starting points, not fixed quotes</span>
+          </div>
+          <p class="section-lede">
+            Clear, focused website packages for small businesses, personal
+            brands, products, and growing ideas.
+          </p>
+
+          <div class="services-grid">
+            <article class="service-card">
+              <p class="service-card__eyebrow">01 / Single page</p>
+              <h3>Landing Pages</h3>
+              <p class="service-card__desc">
+                Focused, modern single-page websites for products, services,
+                campaigns and personal brands.
+              </p>
+              <p class="service-card__price"><span>Starting at</span> $99</p>
+              <ul class="service-card__list">
+                <li>1 page with essential content sections</li>
+                <li>Responsive layout and CTA sections</li>
+                <li>Basic SEO setup</li>
+                <li>Contact integration where agreed</li>
+                <li>Deployment and 2 revision rounds</li>
+              </ul>
+              <a
+                class="btn btn--secondary"
+                href="#contact"
+                data-project-type="Landing Page"
+                >Discuss a landing page</a
+              >
+            </article>
+
+            <article class="service-card">
+              <p class="service-card__eyebrow">02 / Up to 5 pages</p>
+              <h3>Business Websites</h3>
+              <p class="service-card__desc">
+                Professional multi-page websites for small businesses that need
+                a stronger online presence.
+              </p>
+              <p class="service-card__price"><span>Starting at</span> $249</p>
+              <ul class="service-card__list">
+                <li>Up to 5 responsive pages</li>
+                <li>Tailored UI and contact functionality</li>
+                <li>Social links and basic SEO</li>
+                <li>Deployment and 2 revision rounds</li>
+              </ul>
+              <a
+                class="btn btn--secondary"
+                href="#contact"
+                data-project-type="Business Website"
+                >Discuss a business site</a
+              >
+            </article>
+
+            <article class="service-card">
+              <p class="service-card__eyebrow">03 / Up to 8 pages</p>
+              <h3>Premium Websites</h3>
+              <p class="service-card__desc">
+                More complete web experiences for businesses and personal brands
+                that need a polished, interactive presence.
+              </p>
+              <p class="service-card__price"><span>Starting at</span> $399</p>
+              <ul class="service-card__list">
+                <li>Up to 8 pages with enhanced layouts</li>
+                <li>Appropriate interactions and tasteful animation</li>
+                <li>Contact functionality and basic SEO</li>
+                <li>Performance-conscious implementation</li>
+                <li>Deployment and 2 revision rounds</li>
+              </ul>
+              <a
+                class="btn btn--secondary"
+                href="#contact"
+                data-project-type="Premium Website"
+                >Discuss a premium site</a
+              >
+            </article>
+          </div>
+
+          <div class="redesign-block">
+            <div>
+              <p class="service-card__eyebrow">Website redesign</p>
+              <h3>Already have a website?</h3>
+              <p>
+                If your current website feels outdated, difficult to use, or
+                weak on mobile, I can help redesign the experience while keeping
+                the focus on your business goals.
+              </p>
+              <p class="redesign-block__price">Starting from $100.</p>
+            </div>
+            <div class="redesign-block__actions">
+              <a
+                class="btn btn--primary"
+                href="#contact"
+                data-project-type="Website Redesign"
+                >Improve My Website</a
+              >
+              <ul class="add-on-list" aria-label="Optional website add-ons">
+                <li>Additional page — from $40</li>
+                <li>Basic SEO setup — $50</li>
+                <li>Content upload — from $30</li>
+                <li>Rush delivery — from $50</li>
+                <li>Monthly maintenance — from $49/month</li>
               </ul>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Learning the Foundations -->
-    <section class="section" id="learning">
-      <div class="container">
-        <div class="section-heading">
-          <span class="section-index">05</span>
-          <h2 class="section-title">Learning the foundations</h2>
-        </div>
+      <!-- How I Build -->
+      <section class="section" id="process">
+        <div class="container">
+          <div class="section-heading">
+            <span class="section-index">03</span>
+            <h2 class="section-title">The process</h2>
+          </div>
+          <p class="section-lede">
+            A clear five-step path from the first conversation to a working
+            website.
+          </p>
 
-        <div class="learning-grid">
-          <div class="learning-card">
-            <div class="learning-card__head">
-              <h3 class="learning-card__title">HTML</h3>
-            </div>
-            <ul class="learning-card__list">
-              <li>Semantic structure</li>
-              <li>Forms</li>
-              <li>Accessibility fundamentals</li>
-            </ul>
-            <span class="learning-card__status">Learning</span>
-          </div>
-          <div class="learning-card">
-            <div class="learning-card__head">
-              <h3 class="learning-card__title">CSS</h3>
-            </div>
-            <ul class="learning-card__list">
-              <li>Flexbox</li>
-              <li>Grid</li>
-              <li>Responsive layouts</li>
-              <li>CSS architecture</li>
-            </ul>
-            <span class="learning-card__status">Learning</span>
-          </div>
-          <div class="learning-card">
-            <div class="learning-card__head">
-              <h3 class="learning-card__title">JavaScript</h3>
-            </div>
-            <ul class="learning-card__list">
-              <li>Fundamentals &amp; functions</li>
-              <li>The DOM</li>
-              <li>State</li>
-              <li>Browser APIs</li>
-            </ul>
-            <span class="learning-card__status">Learning</span>
-          </div>
-          <div class="learning-card">
-            <div class="learning-card__head">
-              <h3 class="learning-card__title">Git</h3>
-            </div>
-            <ul class="learning-card__list">
-              <li>Commits</li>
-              <li>Branches</li>
-              <li>Version control</li>
-              <li>GitHub workflow</li>
-            </ul>
-            <span class="learning-card__status">Learning</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Tools / Technologies -->
-    <section class="section" id="tools">
-      <div class="container">
-        <div class="section-heading">
-          <span class="section-index">06</span>
-          <h2 class="section-title">Tools &amp; technologies</h2>
-        </div>
-
-        <div class="tools-grid">
-          <div class="tools-card">
-            <span class="tools-card__label">AI-assisted workflow</span>
-            <ul class="tools-card__list">
-              <li>ChatGPT</li>
-              <li>Claude Code</li>
-              <li>Google Stitch</li>
-              <li>Codex</li>
-            </ul>
-          </div>
-          <div class="tools-card">
-            <span class="tools-card__label">Currently learning</span>
-            <ul class="tools-card__list">
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>JavaScript</li>
-              <li>Git</li>
-            </ul>
-          </div>
-          <div class="tools-card tools-card--muted">
-            <span class="tools-card__label">Used in AI-assisted projects</span>
-            <ul class="tools-card__list">
-              <li>React</li>
-              <li>TypeScript</li>
-              <li>Tailwind CSS</li>
-              <li>Vite</li>
-              <li>REST APIs</li>
-              <li>IndexedDB</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section class="section contact" id="contact">
-      <div class="container">
-        <div class="contact__grid">
-          <div>
-            <span class="section-index">07</span>
-            <h2 class="contact__title">Need a better website?</h2>
-            <p class="contact__lede">Tell me a little about your project and I'll recommend the most suitable direction.</p>
-
-            <form class="inquiry-form" id="inquiry-form" action="mailto:allahverdihesenov42@gmail.com" method="get" novalidate>
-              <div class="form-grid">
-                <div class="field"><label for="name">Name</label><input id="name" name="name" type="text" autocomplete="name" required /></div>
-                <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required /></div>
-                <div class="field field--full"><label for="business">Business / Project Name</label><input id="business" name="business" type="text" autocomplete="organization" /></div>
-                <div class="field"><label for="project-type">Project Type</label><select id="project-type" name="projectType" required><option value="">Select a project type</option><option>Landing Page</option><option>Business Website</option><option>Premium Website</option><option>Website Redesign</option><option>Other</option></select></div>
-                <div class="field"><label for="budget">Approximate Budget</label><select id="budget" name="budget" required><option value="">Select a budget</option><option>Under $100</option><option>$100–250</option><option>$250–500</option><option>$500+</option><option>Not sure yet</option></select></div>
-                <div class="field field--full"><label for="details">Project Details</label><textarea id="details" name="details" rows="5" required aria-describedby="details-hint"></textarea><span class="field__hint" id="details-hint">Share your goals, audience, and the main pages or features you need.</span></div>
-                <div class="field field--full"><label for="deadline">Preferred Deadline</label><input id="deadline" name="deadline" type="text" placeholder="For example: October 2026 or flexible" /></div>
+          <div class="process-grid">
+            <div class="process-step">
+              <span class="process-step__index">01</span>
+              <div>
+                <h3 class="process-step__title">Understand</h3>
+                <p class="process-step__desc">
+                  Define the business, audience, goals, scope and requirements.
+                </p>
               </div>
-              <p class="form-status" id="form-status" role="status" aria-live="polite">Submitting opens your email app with the project details filled in. Nothing is sent automatically.</p>
-              <button class="btn btn--primary" type="submit">Prepare Project Email</button>
-            </form>
-          </div>
-
-          <div class="faq">
-            <h3>Frequently asked questions</h3>
-            <details><summary>How much does a website cost?</summary><p>Landing pages start at $99, business websites at $249, premium websites at $399, and redesigns at $100. The final quote depends on the agreed scope.</p></details>
-            <details><summary>How do payments work?</summary><p>Most projects use 50% upfront and 50% before final handover. Payment methods are agreed before work begins.</p></details>
-            <details><summary>How many revisions are included?</summary><p>Two revision rounds are included. Major scope changes are quoted separately.</p></details>
-            <details><summary>Do you provide hosting?</summary><p>I can deploy the website and help you choose a suitable host. Paid hosting is separate unless otherwise agreed.</p></details>
-            <details><summary>Do you provide domains?</summary><p>I can help with setup, but domain registration and renewal remain separate and should be owned by you.</p></details>
-            <details><summary>Who provides website content?</summary><p>You provide the final business information, text, brand assets and images. Content upload or basic structuring can be added to the scope.</p></details>
-            <details><summary>Do you use AI to build websites?</summary><p>Yes. AI supports research, implementation and iteration, while the finished work still goes through review, testing, debugging and refinement.</p></details>
-            <details><summary>Can you redesign an existing website?</summary><p>Yes. I can improve an outdated or difficult-to-use website while keeping the focus on your business goals and existing content.</p></details>
-            <p class="faq__note">I'll review your project details and get back to you as soon as possible.</p>
+            </div>
+            <div class="process-step">
+              <span class="process-step__index">02</span>
+              <div>
+                <h3 class="process-step__title">Plan</h3>
+                <p class="process-step__desc">
+                  Define the structure, visual direction and required
+                  interactions.
+                </p>
+              </div>
+            </div>
+            <div class="process-step">
+              <span class="process-step__index">03</span>
+              <div>
+                <h3 class="process-step__title">Build</h3>
+                <p class="process-step__desc">
+                  Implement the approved direction with modern frontend
+                  technologies and an AI-assisted workflow.
+                </p>
+              </div>
+            </div>
+            <div class="process-step">
+              <span class="process-step__index">04</span>
+              <div>
+                <h3 class="process-step__title">Refine</h3>
+                <p class="process-step__desc">
+                  Test responsive behaviour, validate functionality and refine
+                  the work based on feedback.
+                </p>
+              </div>
+            </div>
+            <div class="process-step">
+              <span class="process-step__index">05</span>
+              <div>
+                <h3 class="process-step__title">Launch</h3>
+                <p class="process-step__desc">
+                  Perform final checks, deploy the website and complete
+                  handover.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-  </main>
+      </section>
 
-  <footer class="site-footer">
-    <div class="container site-footer__inner">
-      <p><strong>Allahverdi Hasanov</strong><br />AI-Assisted Website Builder<br />© 2026 Allahverdi Hasanov</p>
-      <div class="site-footer__links">
-        <a href="https://github.com/allahverdi-dev" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <a href="https://www.linkedin.com/in/allahverdi-hasanov/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <a href="https://www.instagram.com/allahverdi.dev/" target="_blank" rel="noopener noreferrer">Instagram</a>
-        <a href="mailto:allahverdihesenov42@gmail.com">Email</a>
-      </div>
-    </div>
-  </footer>
+      <!-- About -->
+      <section class="section about" id="about">
+        <div class="container">
+          <div class="about__grid">
+            <figure class="about__portrait">
+              <img
+                src="images/portrait.jpg"
+                width="900"
+                height="1125"
+                loading="lazy"
+                decoding="async"
+                alt="Allahverdi Hasanov at his desk, wearing glasses and a dark overshirt, with code editors open on the monitors behind him."
+              />
+              <figcaption class="about__portrait-meta">
+                <span>Lankaran, Azerbaijan</span>
+                <span>AI-Assisted Website Builder</span>
+              </figcaption>
+            </figure>
+            <div>
+              <span class="eyebrow">04 / About</span>
+              <h2 class="about__title">Building, learning and shipping.</h2>
+              <p class="about__body">
+                I'm Allahverdi Hasanov, an AI-assisted web builder focused on
+                turning ideas into working digital products. My approach blends
+                foundational web knowledge with modern workflows. I work across
+                product direction, UI/UX decisions and implementation, with a
+                focus on understanding how to build, review, test, debug and
+                improve what gets built.
+              </p>
+              <p class="about__quote">
+                My current focus is creating useful web experiences while
+                continuing to develop my frontend skills.
+              </p>
+              <div class="about__tags">
+                <span class="tag">HTML &amp; CSS</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">React</span>
+                <span class="tag">Tailwind CSS</span>
+                <span class="tag">Git &amp; GitHub</span>
+              </div>
+              <div class="workflow-note">
+                <h3>How I build, with AI assistance</h3>
+                <p>
+                  I use tools such as Claude Code and Google Stitch to
+                  accelerate research, implementation and iteration. AI assists
+                  the workflow, while every delivered project still requires
+                  review, testing, debugging and refinement. The focus is the
+                  quality of the finished product, not the novelty of the tools.
+                </p>
+                <ul aria-label="AI-assisted workflow stages">
+                  <li>Planning</li>
+                  <li>Implementation</li>
+                  <li>Review</li>
+                  <li>Iteration</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-  <script src="script.js"></script>
-</body>
+      <!-- Learning the Foundations -->
+      <section class="section" id="learning">
+        <div class="container">
+          <div class="section-heading">
+            <span class="section-index">05</span>
+            <h2 class="section-title">Learning the foundations</h2>
+          </div>
+
+          <div class="learning-grid">
+            <div class="learning-card">
+              <div class="learning-card__head">
+                <h3 class="learning-card__title">HTML</h3>
+              </div>
+              <ul class="learning-card__list">
+                <li>Semantic structure</li>
+                <li>Forms</li>
+                <li>Accessibility fundamentals</li>
+              </ul>
+              <span class="learning-card__status">Learning</span>
+            </div>
+            <div class="learning-card">
+              <div class="learning-card__head">
+                <h3 class="learning-card__title">CSS</h3>
+              </div>
+              <ul class="learning-card__list">
+                <li>Flexbox</li>
+                <li>Grid</li>
+                <li>Responsive layouts</li>
+                <li>CSS architecture</li>
+              </ul>
+              <span class="learning-card__status">Learning</span>
+            </div>
+            <div class="learning-card">
+              <div class="learning-card__head">
+                <h3 class="learning-card__title">JavaScript</h3>
+              </div>
+              <ul class="learning-card__list">
+                <li>Fundamentals &amp; functions</li>
+                <li>The DOM</li>
+                <li>State</li>
+                <li>Browser APIs</li>
+              </ul>
+              <span class="learning-card__status">Learning</span>
+            </div>
+            <div class="learning-card">
+              <div class="learning-card__head">
+                <h3 class="learning-card__title">Git</h3>
+              </div>
+              <ul class="learning-card__list">
+                <li>Commits</li>
+                <li>Branches</li>
+                <li>Version control</li>
+                <li>GitHub workflow</li>
+              </ul>
+              <span class="learning-card__status">Learning</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tools / Technologies -->
+      <section class="section" id="tools">
+        <div class="container">
+          <div class="section-heading">
+            <span class="section-index">06</span>
+            <h2 class="section-title">Tools &amp; technologies</h2>
+          </div>
+
+          <div class="tools-grid">
+            <div class="tools-card">
+              <span class="tools-card__label">AI-assisted workflow</span>
+              <ul class="tools-card__list">
+                <li>ChatGPT</li>
+                <li>Claude Code</li>
+                <li>Google Stitch</li>
+                <li>Codex</li>
+              </ul>
+            </div>
+            <div class="tools-card">
+              <span class="tools-card__label">Currently learning</span>
+              <ul class="tools-card__list">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Git</li>
+              </ul>
+            </div>
+            <div class="tools-card tools-card--muted">
+              <span class="tools-card__label"
+                >Used in AI-assisted projects</span
+              >
+              <ul class="tools-card__list">
+                <li>React</li>
+                <li>TypeScript</li>
+                <li>Tailwind CSS</li>
+                <li>Vite</li>
+                <li>REST APIs</li>
+                <li>IndexedDB</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section class="section contact" id="contact">
+        <div class="container">
+          <div class="contact__grid">
+            <div>
+              <span class="section-index">07</span>
+              <h2 class="contact__title">Need a better website?</h2>
+              <p class="contact__lede">
+                Tell me a little about your project and I'll recommend the most
+                suitable direction.
+              </p>
+
+              <form
+                class="inquiry-form"
+                id="inquiry-form"
+                action="https://formspree.io/f/xeaqqvjg"
+                method="POST"
+              >
+                <div class="form-grid">
+                  <div class="field">
+                    <label for="name">Name</label
+                    ><input
+                      id="name"
+                      name="name"
+                      type="text"
+                      autocomplete="name"
+                      required
+                    />
+                  </div>
+                  <div class="field">
+                    <label for="email">Email</label
+                    ><input
+                      id="email"
+                      name="email"
+                      type="email"
+                      autocomplete="email"
+                      required
+                    />
+                  </div>
+                  <div class="field field--full">
+                    <label for="business">Business / Project Name</label
+                    ><input
+                      id="business"
+                      name="business"
+                      type="text"
+                      autocomplete="organization"
+                    />
+                  </div>
+                  <div class="field">
+                    <label for="project-type">Project Type</label
+                    ><select id="project-type" name="projectType" required>
+                      <option value="">Select a project type</option>
+                      <option>Landing Page</option>
+                      <option>Business Website</option>
+                      <option>Premium Website</option>
+                      <option>Website Redesign</option>
+                      <option>Other</option>
+                    </select>
+                  </div>
+                  <div class="field">
+                    <label for="budget">Approximate Budget</label
+                    ><select id="budget" name="budget" required>
+                      <option value="">Select a budget</option>
+                      <option>Under $100</option>
+                      <option>$100–250</option>
+                      <option>$250–500</option>
+                      <option>$500+</option>
+                      <option>Not sure yet</option>
+                    </select>
+                  </div>
+                  <div class="field field--full">
+                    <label for="details">Project Details</label
+                    ><textarea
+                      id="details"
+                      name="details"
+                      rows="5"
+                      required
+                      aria-describedby="details-hint"
+                    ></textarea
+                    ><span class="field__hint" id="details-hint"
+                      >Share your goals, audience, and the main pages or
+                      features you need.</span
+                    >
+                  </div>
+                  <div class="field field--full">
+                    <label for="deadline">Preferred Deadline</label
+                    ><input
+                      id="deadline"
+                      name="deadline"
+                      type="text"
+                      placeholder="For example: October 2026 or flexible"
+                    />
+                  </div>
+                </div>
+                <p
+                  class="form-status"
+                  id="form-status"
+                  role="status"
+                  aria-live="polite"
+                >
+                  Your project details will be sent directly to me.
+                </p>
+                <button class="btn btn--primary" type="submit">
+                  Send Project Inquiry
+                </button>
+              </form>
+            </div>
+
+            <div class="faq">
+              <h3>Frequently asked questions</h3>
+              <details>
+                <summary>How much does a website cost?</summary>
+                <p>
+                  Landing pages start at $99, business websites at $249, premium
+                  websites at $399, and redesigns at $100. The final quote
+                  depends on the agreed scope.
+                </p>
+              </details>
+              <details>
+                <summary>How do payments work?</summary>
+                <p>
+                  Most projects use 50% upfront and 50% before final handover.
+                  Payment methods are agreed before work begins.
+                </p>
+              </details>
+              <details>
+                <summary>How many revisions are included?</summary>
+                <p>
+                  Two revision rounds are included. Major scope changes are
+                  quoted separately.
+                </p>
+              </details>
+              <details>
+                <summary>Do you provide hosting?</summary>
+                <p>
+                  I can deploy the website and help you choose a suitable host.
+                  Paid hosting is separate unless otherwise agreed.
+                </p>
+              </details>
+              <details>
+                <summary>Do you provide domains?</summary>
+                <p>
+                  I can help with setup, but domain registration and renewal
+                  remain separate and should be owned by you.
+                </p>
+              </details>
+              <details>
+                <summary>Who provides website content?</summary>
+                <p>
+                  You provide the final business information, text, brand assets
+                  and images. Content upload or basic structuring can be added
+                  to the scope.
+                </p>
+              </details>
+              <details>
+                <summary>Do you use AI to build websites?</summary>
+                <p>
+                  Yes. AI supports research, implementation and iteration, while
+                  the finished work still goes through review, testing,
+                  debugging and refinement.
+                </p>
+              </details>
+              <details>
+                <summary>Can you redesign an existing website?</summary>
+                <p>
+                  Yes. I can improve an outdated or difficult-to-use website
+                  while keeping the focus on your business goals and existing
+                  content.
+                </p>
+              </details>
+              <p class="faq__note">
+                I'll review your project details and get back to you as soon as
+                possible.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container site-footer__inner">
+        <p>
+          <strong>Allahverdi Hasanov</strong><br />AI-Assisted Website
+          Builder<br />© 2026 Allahverdi Hasanov
+        </p>
+        <div class="site-footer__links">
+          <a
+            href="https://github.com/allahverdi-dev"
+            target="_blank"
+            rel="noopener noreferrer"
+            >GitHub</a
+          >
+          <a
+            href="https://www.linkedin.com/in/allahverdi-hasanov/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >LinkedIn</a
+          >
+          <a
+            href="https://www.instagram.com/allahverdi.dev/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Instagram</a
+          >
+          <a href="mailto:allahverdihesenov42@gmail.com">Email</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
 </html>

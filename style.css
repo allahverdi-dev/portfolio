@@ -1551,6 +1551,11 @@ input:focus-visible,
 .form-status { margin-block: var(--space-md); }
 .form-status[data-error="true"] { color: #b64d3b; }
 
+.inquiry-form button[type="submit"]:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
 @media (min-width: 620px) {
   .form-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .field--full { grid-column: 1 / -1; }

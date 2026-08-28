@@ -142,8 +142,7 @@
   }
 
   /* ---------------------------------------------------------------------
-     Project inquiry: static-site-safe handoff to the visitor's email app.
-     No success is claimed because the website cannot know whether mail sent.
+     Project inquiry: progressively enhanced Formspree submission.
      --------------------------------------------------------------------- */
   var inquiryForm = document.getElementById("inquiry-form");
   var formStatus = document.getElementById("form-status");
@@ -157,11 +156,13 @@
 
   if (inquiryForm && formStatus) {
     var requiredFields = Array.prototype.slice.call(inquiryForm.querySelectorAll("[required]"));
+    var formFields = Array.prototype.slice.call(inquiryForm.querySelectorAll("input, select, textarea"));
+    var submitButton = inquiryForm.querySelector('button[type="submit"]');
+    var submitButtonLabel = "Send Project Inquiry";
 
     requiredFields.forEach(function (field) {
       field.addEventListener("input", function () {
-        field.removeAttribute("aria-invalid");
-        formStatus.removeAttribute("data-error");
+        if (field.validity.valid) field.removeAttribute("aria-invalid");
       });
     });
 
@@ -171,7 +172,7 @@
       formStatus.setAttribute("data-error", "true");
     }, true);
 
-    inquiryForm.addEventListener("submit", function (event) {
+    inquiryForm.addEventListener("submit", async function (event) {
       event.preventDefault();
 
       if (!inquiryForm.checkValidity()) {
@@ -184,23 +185,41 @@
         return;
       }
 
-      var data = new FormData(inquiryForm);
-      var subject = "Website project inquiry — " + data.get("projectType");
-      var body = [
-        "Name: " + data.get("name"),
-        "Email: " + data.get("email"),
-        "Business / project: " + (data.get("business") || "Not provided"),
-        "Project type: " + data.get("projectType"),
-        "Approximate budget: " + data.get("budget"),
-        "Preferred deadline: " + (data.get("deadline") || "Not provided"),
-        "",
-        "Project details:",
-        data.get("details")
-      ].join("\n");
-
-      formStatus.textContent = "Opening your email app with the project details filled in. Review the message there before sending.";
+      if (submitButton) {
+        submitButton.disabled = true;
+        submitButton.setAttribute("aria-disabled", "true");
+        submitButton.textContent = "Sending...";
+      }
+      formStatus.textContent = "Sending your project inquiry...";
       formStatus.removeAttribute("data-error");
-      window.location.href = "mailto:allahverdihesenov42@gmail.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+
+      try {
+        var response = await fetch(inquiryForm.action, {
+          method: "POST",
+          body: new FormData(inquiryForm),
+          headers: {
+            Accept: "application/json"
+          }
+        });
+
+        if (!response.ok) throw new Error("Form submission failed");
+
+        formStatus.textContent = "Thanks — your project inquiry has been sent. I'll review it and get back to you as soon as possible.";
+        formStatus.removeAttribute("data-error");
+        inquiryForm.reset();
+        formFields.forEach(function (field) {
+          field.removeAttribute("aria-invalid");
+        });
+      } catch (error) {
+        formStatus.textContent = "Something went wrong while sending your message. Please try again, or email me directly at allahverdihesenov42@gmail.com.";
+        formStatus.setAttribute("data-error", "true");
+      } finally {
+        if (submitButton) {
+          submitButton.disabled = false;
+          submitButton.removeAttribute("aria-disabled");
+          submitButton.textContent = submitButtonLabel;
+        }
+      }
     });
   }
 })();
