@@ -114,6 +114,10 @@
 
     var observer = new IntersectionObserver(
       function (entries) {
+        if (window.scrollY < 120) {
+          setActive("top");
+          return;
+        }
         var visible = entries
           .filter(function (entry) {
             return entry.isIntersecting;
@@ -128,6 +132,75 @@
 
     sections.forEach(function (section) {
       observer.observe(section);
+    });
+
+    var markHomeNearTop = function () {
+      if (window.scrollY < 120) setActive("top");
+    };
+    window.addEventListener("scroll", markHomeNearTop, { passive: true });
+    markHomeNearTop();
+  }
+
+  /* ---------------------------------------------------------------------
+     Project inquiry: static-site-safe handoff to the visitor's email app.
+     No success is claimed because the website cannot know whether mail sent.
+     --------------------------------------------------------------------- */
+  var inquiryForm = document.getElementById("inquiry-form");
+  var formStatus = document.getElementById("form-status");
+  var projectType = document.getElementById("project-type");
+
+  Array.prototype.slice.call(document.querySelectorAll("[data-project-type]")).forEach(function (link) {
+    link.addEventListener("click", function () {
+      if (projectType) projectType.value = link.getAttribute("data-project-type") || "";
+    });
+  });
+
+  if (inquiryForm && formStatus) {
+    var requiredFields = Array.prototype.slice.call(inquiryForm.querySelectorAll("[required]"));
+
+    requiredFields.forEach(function (field) {
+      field.addEventListener("input", function () {
+        field.removeAttribute("aria-invalid");
+        formStatus.removeAttribute("data-error");
+      });
+    });
+
+    inquiryForm.addEventListener("invalid", function (event) {
+      event.target.setAttribute("aria-invalid", "true");
+      formStatus.textContent = "Please complete the required fields and enter a valid email address.";
+      formStatus.setAttribute("data-error", "true");
+    }, true);
+
+    inquiryForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      if (!inquiryForm.checkValidity()) {
+        requiredFields.forEach(function (field) {
+          field.setAttribute("aria-invalid", String(!field.validity.valid));
+        });
+        formStatus.textContent = "Please complete the required fields and enter a valid email address.";
+        formStatus.setAttribute("data-error", "true");
+        inquiryForm.reportValidity();
+        return;
+      }
+
+      var data = new FormData(inquiryForm);
+      var subject = "Website project inquiry — " + data.get("projectType");
+      var body = [
+        "Name: " + data.get("name"),
+        "Email: " + data.get("email"),
+        "Business / project: " + (data.get("business") || "Not provided"),
+        "Project type: " + data.get("projectType"),
+        "Approximate budget: " + data.get("budget"),
+        "Preferred deadline: " + (data.get("deadline") || "Not provided"),
+        "",
+        "Project details:",
+        data.get("details")
+      ].join("\n");
+
+      formStatus.textContent = "Opening your email app with the project details filled in. Review the message there before sending.";
+      formStatus.removeAttribute("data-error");
+      window.location.href = "mailto:allahverdihesenov42@gmail.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
     });
   }
 })();

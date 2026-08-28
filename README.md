@@ -1,6 +1,6 @@
 # Portfolio — Allahverdi Hasanov
 
-Personal portfolio of **Allahverdi Hasanov**, a Vibe Coder / AI-Assisted Builder from Lankaran, Azerbaijan.
+Personal portfolio and freelance website-service presence for **Allahverdi Hasanov**, an AI-Assisted Website Builder from Lankaran, Azerbaijan.
 
 🔗 **Live:** [allahverdi-dev.github.io/portfolio](https://allahverdi-dev.github.io/portfolio/)
 
@@ -8,7 +8,7 @@ Personal portfolio of **Allahverdi Hasanov**, a Vibe Coder / AI-Assisted Builder
 
 ## About this site
 
-A single-page, static portfolio presenting four shipped projects, the workflow behind them, and an honest account of where I am in learning frontend development.
+A single-page, static portfolio presenting four shipped projects, three clearly scoped website packages, the workflow behind them, and an honest account of where I am in learning frontend development.
 
 The site is deliberately built as plain HTML, CSS, and vanilla JavaScript — no framework, no build step, no dependencies to install.
 
@@ -81,5 +81,6 @@ Deployed as a static site via **GitHub Pages** from the repository root.
 ## Contact
 
 * GitHub: [@allahverdi-dev](https://github.com/allahverdi-dev)
-* Instagram: [@itssalikk](https://www.instagram.com/itssalikk/)
+* LinkedIn: [Allahverdi Hasanov](https://www.linkedin.com/in/allahverdi-hasanov/)
+* Instagram: [@allahverdi.dev](https://www.instagram.com/allahverdi.dev/)
 * Email: allahverdihesenov42@gmail.com
