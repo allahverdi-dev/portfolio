@@ -10,7 +10,9 @@
   const form = document.getElementById("inquiry-form");
   const formStatus = document.getElementById("form-status");
   const year = document.getElementById("year");
-  const themeColor = document.querySelector('meta[name="theme-color"]:not([media])');
+  const themeColor = document.querySelector(
+    'meta[name="theme-color"]:not([media])',
+  );
   const mobileMedia = window.matchMedia("(max-width: 720px)");
   const systemDark = window.matchMedia("(prefers-color-scheme: dark)");
 
@@ -24,9 +26,16 @@
 
   const syncThemeUi = () => {
     const dark = getEffectiveTheme() === "dark";
-    themeToggle?.setAttribute("aria-label", dark ? "Switch to light theme" : "Switch to dark theme");
-    themeToggle?.setAttribute("title", dark ? "Switch to light theme" : "Switch to dark theme");
-    if (themeColor) themeColor.setAttribute("content", dark ? "#111412" : "#f6f4ef");
+    themeToggle?.setAttribute(
+      "aria-label",
+      dark ? "Switch to light theme" : "Switch to dark theme",
+    );
+    themeToggle?.setAttribute(
+      "title",
+      dark ? "Switch to light theme" : "Switch to dark theme",
+    );
+    if (themeColor)
+      themeColor.setAttribute("content", dark ? "#111412" : "#f6f4ef");
   };
 
   syncThemeUi();
@@ -34,7 +43,9 @@
   themeToggle?.addEventListener("click", () => {
     const next = getEffectiveTheme() === "dark" ? "light" : "dark";
     root.dataset.theme = next;
-    try { localStorage.setItem("theme", next); } catch (_) {}
+    try {
+      localStorage.setItem("theme", next);
+    } catch (_) {}
     syncThemeUi();
   });
 
@@ -42,9 +53,14 @@
     if (!root.dataset.theme) syncThemeUi();
   });
 
-  const menuFocusable = () => navLinks
-    ? [...navLinks.querySelectorAll('a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])')]
-    : [];
+  const menuFocusable = () =>
+    navLinks
+      ? [
+          ...navLinks.querySelectorAll(
+            'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])',
+          ),
+        ]
+      : [];
 
   const closeMenu = ({ restoreFocus = false } = {}) => {
     navLinks?.classList.remove("is-open");
@@ -68,8 +84,12 @@
     navLinks?.classList.contains("is-open") ? closeMenu() : openMenu();
   });
 
-  navBackdrop?.addEventListener("click", () => closeMenu({ restoreFocus: true }));
-  navLinks?.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => closeMenu()));
+  navBackdrop?.addEventListener("click", () =>
+    closeMenu({ restoreFocus: true }),
+  );
+  navLinks
+    ?.querySelectorAll("a")
+    .forEach((link) => link.addEventListener("click", () => closeMenu()));
 
   document.addEventListener("keydown", (event) => {
     if (!navLinks?.classList.contains("is-open")) return;
@@ -103,7 +123,9 @@
     link.addEventListener("click", () => {
       const value = link.dataset.project;
       if (!projectType || !value) return;
-      const match = [...projectType.options].find((option) => option.textContent.trim() === value);
+      const match = [...projectType.options].find(
+        (option) => option.textContent.trim() === value,
+      );
       if (match) projectType.value = match.value || match.textContent;
     });
   });
@@ -113,33 +135,41 @@
 
   if (!reduceMotion.matches && "IntersectionObserver" in window) {
     revealItems.forEach((item) => item.classList.add("reveal-pending"));
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add("is-visible");
-        observer.unobserve(entry.target);
-      });
-    }, { threshold: 0.1, rootMargin: "0px 0px -3% 0px" });
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        });
+      },
+      { threshold: 0.1, rootMargin: "0px 0px -3% 0px" },
+    );
     revealItems.forEach((item) => observer.observe(item));
   }
 
-  const sectionLinks = [...document.querySelectorAll('.nav-links a[href^="#"]')];
+  const sectionLinks = [
+    ...document.querySelectorAll('.nav-links a[href^="#"]'),
+  ];
   const sections = sectionLinks
     .map((link) => document.querySelector(link.getAttribute("href")))
     .filter(Boolean);
 
   if ("IntersectionObserver" in window && sections.length) {
-    const spy = new IntersectionObserver((entries) => {
-      const visible = entries
-        .filter((entry) => entry.isIntersecting)
-        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-      if (!visible) return;
-      sectionLinks.forEach((link) => {
-        const active = link.getAttribute("href") === `#${visible.target.id}`;
-        if (active) link.setAttribute("aria-current", "page");
-        else link.removeAttribute("aria-current");
-      });
-    }, { threshold: [0.15, 0.35, 0.6], rootMargin: "-18% 0px -55% 0px" });
+    const spy = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+        if (!visible) return;
+        sectionLinks.forEach((link) => {
+          const active = link.getAttribute("href") === `#${visible.target.id}`;
+          if (active) link.setAttribute("aria-current", "page");
+          else link.removeAttribute("aria-current");
+        });
+      },
+      { threshold: [0.15, 0.35, 0.6], rootMargin: "-18% 0px -55% 0px" },
+    );
     sections.forEach((section) => spy.observe(section));
   }
 
@@ -155,7 +185,9 @@
         const rotateX = (0.5 - y) * 2.4;
         element.style.transform = `perspective(1200px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-2px)`;
       });
-      element.addEventListener("pointerleave", () => { element.style.transform = ""; });
+      element.addEventListener("pointerleave", () => {
+        element.style.transform = "";
+      });
     });
   }
 
@@ -165,8 +197,11 @@
 
     const submit = form.querySelector('button[type="submit"]');
     const original = submit?.textContent || "Send project inquiry";
-    const controller = "AbortController" in window ? new AbortController() : null;
-    const timeout = controller ? setTimeout(() => controller.abort(), 12000) : null;
+    const controller =
+      "AbortController" in window ? new AbortController() : null;
+    const timeout = controller
+      ? setTimeout(() => controller.abort(), 12000)
+      : null;
 
     if (submit) {
       submit.disabled = true;
@@ -182,12 +217,15 @@
         headers: { Accept: "application/json" },
         signal: controller?.signal,
       });
-      if (!response.ok) throw new Error(`Form submission failed: ${response.status}`);
+      if (!response.ok)
+        throw new Error(`Form submission failed: ${response.status}`);
       form.reset();
-      if (formStatus) formStatus.textContent = "Thanks — your inquiry was sent successfully.";
+      if (formStatus)
+        formStatus.textContent = "Thanks — your inquiry was sent successfully.";
     } catch (_) {
       if (formStatus) {
-        formStatus.textContent = "The form could not be sent automatically. Please email me at allahverdihesenov42@gmail.com.";
+        formStatus.textContent =
+          "The form could not be sent automatically. Please email me at allahverdihesenov42@gmail.com.";
       }
     } finally {
       if (timeout) clearTimeout(timeout);
