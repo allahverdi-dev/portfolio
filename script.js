@@ -173,23 +173,45 @@
     sections.forEach((section) => spy.observe(section));
   }
 
-  const finePointer = window.matchMedia("(pointer: fine)");
-  if (!reduceMotion.matches && finePointer.matches) {
-    document.querySelectorAll("[data-tilt]").forEach((element) => {
-      element.addEventListener("pointermove", (event) => {
-        const rect = element.getBoundingClientRect();
-        if (!rect.width || !rect.height) return;
-        const x = (event.clientX - rect.left) / rect.width;
-        const y = (event.clientY - rect.top) / rect.height;
-        const rotateY = (x - 0.5) * 3.2;
-        const rotateX = (0.5 - y) * 2.4;
-        element.style.transform = `perspective(1200px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-2px)`;
-      });
-      element.addEventListener("pointerleave", () => {
-        element.style.transform = "";
-      });
+  const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)");
+  const tiltItems = [...document.querySelectorAll("[data-tilt]")];
+  const resetTilt = () =>
+    tiltItems.forEach((element) => {
+      element.style.removeProperty("transform");
     });
-  }
+
+  tiltItems.forEach((element) => {
+    const reset = () => element.style.removeProperty("transform");
+    element.addEventListener("pointermove", (event) => {
+      if (
+        reduceMotion.matches ||
+        !finePointer.matches ||
+        event.pointerType === "touch"
+      )
+        return;
+      const rect = element.getBoundingClientRect();
+      if (!rect.width || !rect.height) return;
+      const x = Math.max(
+        0,
+        Math.min(1, (event.clientX - rect.left) / rect.width),
+      );
+      const y = Math.max(
+        0,
+        Math.min(1, (event.clientY - rect.top) / rect.height),
+      );
+      element.style.transform = `perspective(1200px) rotateX(${(0.5 - y) * 2}deg) rotateY(${(x - 0.5) * 2.6}deg)`;
+    });
+    element.addEventListener("pointerleave", reset);
+    element.addEventListener("pointercancel", reset);
+    element.addEventListener("blur", reset);
+  });
+  finePointer.addEventListener?.("change", resetTilt);
+  reduceMotion.addEventListener?.("change", () => {
+    resetTilt();
+    if (reduceMotion.matches) {
+      revealItems.forEach((item) => item.classList.add("is-visible"));
+    }
+  });
 
   form?.addEventListener("submit", async (event) => {
     if (!window.fetch) return;
