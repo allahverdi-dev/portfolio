@@ -184,9 +184,24 @@ textarea:focus-visible {
   z-index: 100;
   height: var(--header);
   border-bottom: 1px solid var(--line);
+  background: transparent;
+  isolation: isolate;
+}
+
+.site-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
   background: color-mix(in srgb, var(--bg) 86%, transparent);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
+}
+
+.brand,
+.header-actions {
+  position: relative;
+  z-index: 100;
 }
 
 .header-inner {
