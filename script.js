@@ -166,7 +166,6 @@
         </div>
         <div class="inline-links">
           <a href="https://jspath.vercel.app" target="_blank" rel="noopener noreferrer">Live product ↗</a>
-          <a href="https://github.com/allahverdi-dev/jspath" target="_blank" rel="noopener noreferrer">Repository ↗</a>
         </div>
       </div>
     </div>`;
