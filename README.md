@@ -1,86 +1,85 @@
 # Portfolio — Allahverdi Hasanov
 
-Personal portfolio and freelance website-service presence for **Allahverdi Hasanov**, an AI-Assisted Website Builder from Lankaran, Azerbaijan.
+Personal portfolio for **Allahverdi Hasanov**, a Frontend Developer & AI-Assisted Product Builder based in Azerbaijan.
 
-🔗 **Live:** [allahverdi-dev.github.io/portfolio](https://allahverdi-dev.github.io/portfolio/)
+**Live:** https://allahverdi-dev.github.io/portfolio/
 
-> I turn ideas into working digital products with AI-assisted development — while learning the web from the fundamentals.
+The portfolio focuses on shipped product work, frontend engineering, responsive implementation, testing, and practical product delivery.
 
-## About this site
+## Current flagship
 
-A single-page, static portfolio presenting four shipped projects, three clearly scoped website packages, the workflow behind them, and an honest account of where I am in learning frontend development.
+### MOVANE — Supply Chain Control Tower
 
-The site is deliberately built as plain HTML, CSS, and vanilla JavaScript — no framework, no build step, no dependencies to install.
+MOVANE is the current flagship project: an enterprise-style supply chain operations frontend covering shipments, suppliers, inventory, warehouses, exceptions, risk, route intelligence, cold-chain monitoring, public tracking, and disruption simulation.
 
-## Structure
+**Highlights:**
+
+- 47 product and marketing routes
+- Scenario Lab for deterministic disruption simulations
+- 154 automated tests
+- Responsive desktop and mobile product shell
+- Backend-ready repository boundaries
+- Production deployment on Vercel
+
+**Stack:** React · TypeScript · Vite · TanStack · MapLibre · IndexedDB · Vitest · Playwright
+
+**Live:** https://movane.vercel.app
+
+## Selected work
+
+| Project | Focus | Stack |
+| --- | --- | --- |
+| MOVANE | Enterprise supply-chain control tower | React · TypeScript · Vite · MapLibre · TanStack |
+| JSPath | Comprehensive JavaScript learning platform | React · Vite · Monaco Editor · Vitest · GitHub Actions |
+| ZEVQORA | AI-agent operations and control-plane frontend | React · TypeScript · Vite · Vitest |
+| LangArt | English learning and teaching platform | React · TypeScript · Vite · Tailwind CSS |
+| Finora | Local-first personal finance dashboard | HTML · CSS · Vanilla JS · IndexedDB |
+| CineScope | Movie discovery web app | HTML · CSS · JavaScript · TMDB API |
+| Nota Workspace | Local-first notes workspace | HTML · CSS · Vanilla JS · IndexedDB |
+
+## How I work
+
+**Define → Design → Build → Review → Test → Debug → Iterate → Ship**
+
+AI-assisted tools are part of the workflow, but product direction, feature decisions, UX review, testing, debugging, quality control, and deployment remain deliberate parts of the process.
+
+## Site implementation
+
+The portfolio itself is deliberately lightweight:
 
 ```text
 portfolio/
-│
 ├── images/
-│   └── projects/           # Real project screenshots (JPEG, resized)
-│
-├── index.html              # The entire page
-├── style.css               # Design tokens + component styles
-├── script.js               # Theme toggle, mobile nav, scroll spy
-├── favicon.svg             # AH monogram
+│   └── projects/
+├── index.html
+├── style.css
+├── script.js
+├── favicon.svg
 └── README.md
 ```
 
-## Design system
+It uses plain HTML, CSS, and vanilla JavaScript with no framework or production build step.
 
-The visual design comes from a Google Stitch design system, *Vibe Builder Editorial* — editorial minimalism with a serif display face, hairline rules, and a single restrained accent.
+## Frontend quality
 
-| Token group | Implementation |
-| ----------- | -------------- |
-| Typography  | Libre Caslon Text (display), Hanken Grotesk (body), JetBrains Mono (labels) |
-| Color       | CSS custom properties, light + dark themes |
-| Spacing     | `--space-*` scale, 1280px max container |
-| Shape       | 4px / 8px radii, 1px hairline borders |
+The site includes:
 
-Theme follows the operating system by default and can be overridden with the header toggle; the choice persists in `localStorage`.
-
-## Featured projects
-
-| # | Project | Type | Stack |
-| - | ------- | ---- | ----- |
-| 01 | [LangArt](https://langart-beta.vercel.app/) | EdTech learning platform | React · TypeScript · Vite · Tailwind CSS |
-| 02 | [CineScope](https://cinescope.allahverdihesenov42.workers.dev/) | Movie discovery web app | HTML · CSS · JavaScript · TMDB API |
-| 03 | [Finora](https://allahverdi-dev.github.io/finora/) | Local-first finance dashboard | HTML · CSS · Vanilla JS · IndexedDB |
-| 04 | [Nota Workspace](https://allahverdi-dev.github.io/nota-workspace/) | Local-first notes workspace | HTML · CSS · Vanilla JS · IndexedDB |
-
-## How I build
-
-**Define** → **Design** → **Build with AI** → **Review** → **Test & debug** → **Ship**
-
-I contribute through product direction, feature and UX decisions, prompt design, AI-assisted implementation, review, testing, debugging direction, QA, iteration, and deployment. I direct and review what gets built rather than claiming to have hand-written every line.
-
-## Accessibility & performance
-
-* Semantic landmarks and a logical heading hierarchy
-* Skip-to-content link, keyboard-accessible navigation, visible focus states
-* `prefers-reduced-motion` respected throughout
-* Descriptive alt text on every screenshot
-* Lazy-loaded images with explicit dimensions to avoid layout shift
-* No analytics, no trackers, no third-party scripts beyond the web font
-
-## Running locally
-
-No build step. Serve the folder with any static server:
-
-```bash
-npx serve .
-```
-
-Or open `index.html` directly in a browser.
+- Semantic landmarks and logical heading hierarchy
+- Skip navigation
+- Keyboard-accessible mobile navigation
+- Visible focus states
+- Reduced-motion support
+- Responsive layouts
+- Descriptive image alt text
+- Lazy-loaded project imagery where appropriate
+- Light and dark themes with persisted preference
 
 ## Deployment
 
-Deployed as a static site via **GitHub Pages** from the repository root.
+Deployed as a static site through GitHub Pages.
 
 ## Contact
 
-* GitHub: [@allahverdi-dev](https://github.com/allahverdi-dev)
-* LinkedIn: [Allahverdi Hasanov](https://www.linkedin.com/in/allahverdi-hasanov/)
-* Instagram: [@allahverdi.dev](https://www.instagram.com/allahverdi.dev/)
-* Email: allahverdihesenov42@gmail.com
+- GitHub: https://github.com/allahverdi-dev
+- LinkedIn: https://www.linkedin.com/in/allahverdi-hasanov/
+- Instagram: https://www.instagram.com/allahverdi.dev/
