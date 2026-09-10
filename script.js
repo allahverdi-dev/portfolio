@@ -51,24 +51,6 @@
           </a>
 
           <p class="showcase-caption">Command Center · Global operations overview</p>
-
-          <a
-            class="movane-secondary-preview"
-            href="https://movane.vercel.app/app/scenarios"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Open MOVANE Scenario Lab (new tab)"
-          >
-            <img
-              src="images/projects/movane-scenario.webp"
-              alt="MOVANE Scenario Lab disruption simulation result"
-              width="1440"
-              height="900"
-              loading="lazy"
-              decoding="async"
-            />
-            <span>Scenario Lab · Disruption simulation ↗</span>
-          </a>
         </div>
 
         <div class="flagship-copy reveal">
@@ -216,56 +198,8 @@
       object-position: center;
     }
 
-    .movane-secondary-preview {
-      display: block;
-      margin-top: 18px;
-      overflow: hidden;
-      border: 1px solid var(--line);
-      border-radius: var(--showcase-radius);
-      background: var(--surface);
-      transition: transform 0.2s var(--ease), border-color 0.2s ease;
-    }
-
-    .movane-secondary-preview:hover {
-      transform: translateY(-2px);
-      border-color: var(--line-strong);
-    }
-
-    .movane-secondary-preview:focus-visible {
-      outline: 3px solid var(--accent-2);
-      outline-offset: 5px;
-    }
-
-    .movane-secondary-preview img {
-      display: block;
-      width: 100%;
-      height: auto;
-      aspect-ratio: 16 / 10;
-      object-fit: cover;
-      object-position: center top;
-    }
-
-    .movane-secondary-preview span {
-      display: block;
-      padding: 10px 13px;
-      border-top: 1px solid var(--line);
-      color: var(--muted);
-      font-family: var(--font-mono);
-      font-size: 10px;
-    }
-
-    .movane-secondary-preview:hover span {
-      color: var(--text);
-    }
-
     .project-card--jspath .showcase-media {
       background: #111514;
-    }
-
-    @media (max-width: 720px) {
-      .movane-secondary-preview {
-        margin-top: 14px;
-      }
     }
   `;
   document.head.append(style);
