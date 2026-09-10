@@ -1,6 +1,279 @@
 (() => {
   "use strict";
 
+  const flagship = document.querySelector("section.flagship#work");
+  const selectedWork = document.querySelector("section.selected-work");
+  const projectList = selectedWork?.querySelector(".project-list");
+
+  if (!flagship || !selectedWork || !projectList) return;
+
+  flagship.innerHTML = `
+    <div class="container">
+      <div class="section-heading reveal">
+        <div>
+          <span class="section-index">01 / Flagship</span>
+          <h2>MOVANE — supply chain operations, built as a real product.</h2>
+        </div>
+        <p>
+          My most complete enterprise frontend project — built around operational
+          workflows, simulation, data-heavy interfaces, and backend-ready architecture.
+        </p>
+      </div>
+
+      <div class="flagship-grid">
+        <div class="showcase-stage reveal">
+          <a
+            class="showcase-shell showcase-shell--flagship showcase-shell--movane"
+            href="https://movane.vercel.app"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Open MOVANE live demo (new tab)"
+            data-tilt
+          >
+            <span class="showcase-bar" aria-hidden="true">
+              <span class="showcase-dots"><i></i><i></i><i></i></span>
+              <span class="showcase-address">movane.vercel.app</span>
+              <span class="showcase-indicator">↗</span>
+            </span>
+            <span class="showcase-media">
+              <img
+                src="images/projects/movane-cover.webp"
+                alt="MOVANE supply chain control tower Command Center"
+                width="1280"
+                height="720"
+                decoding="async"
+              />
+            </span>
+            <span class="showcase-meta">
+              <span>MOVANE <span class="showcase-tag">Flagship</span></span>
+              <span>Supply Chain Control Tower <span aria-hidden="true">↗</span></span>
+            </span>
+          </a>
+
+          <p class="showcase-caption">Command Center · Global operations overview</p>
+
+          <a
+            class="movane-secondary-preview"
+            href="https://movane.vercel.app/app/scenarios"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Open MOVANE Scenario Lab (new tab)"
+          >
+            <img
+              src="images/projects/movane-scenario.webp"
+              alt="MOVANE Scenario Lab disruption simulation result"
+              width="1440"
+              height="900"
+              loading="lazy"
+              decoding="async"
+            />
+            <span>Scenario Lab · Disruption simulation ↗</span>
+          </a>
+        </div>
+
+        <div class="flagship-copy reveal">
+          <p class="eyebrow">Enterprise operations · Frontend product</p>
+          <h3>One operational view of shipments, suppliers, inventory, risk and disruption.</h3>
+          <p class="flagship-lede">
+            MOVANE is an enterprise supply chain control tower covering shipment
+            operations, supplier dependencies, warehouses, inventory, exceptions,
+            risk, route intelligence, cold-chain monitoring and public tracking.
+            Its Scenario Lab can simulate disruptions and compare their operational
+            impact before and after mitigation.
+          </p>
+
+          <div class="metric-grid" role="group" aria-label="MOVANE product metrics">
+            <div><strong>47</strong><span>Routes</span></div>
+            <div><strong>620</strong><span>Shipments</span></div>
+            <div><strong>154</strong><span>Tests</span></div>
+            <div><strong>14</strong><span>QA widths</span></div>
+          </div>
+
+          <div class="chip-row">
+            <span>React</span>
+            <span>TypeScript</span>
+            <span>Vite</span>
+            <span>MapLibre</span>
+            <span>TanStack</span>
+            <span>IndexedDB</span>
+          </div>
+
+          <div class="inline-links">
+            <a href="https://movane.vercel.app" target="_blank" rel="noopener noreferrer">Live demo ↗</a>
+            <a
+              href="https://verdihesenov.gumroad.com/l/movane-supply-chain-control-tower"
+              target="_blank"
+              rel="noopener noreferrer"
+            >View product ↗</a>
+          </div>
+
+          <div class="quality-note">
+            <span class="quality-dot"></span>
+            <p>
+              <strong>Built for depth:</strong> deterministic demo data, local persistence,
+              Scenario Lab, responsive product shell, automated testing, and repository
+              interfaces ready for a real backend.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>`;
+
+  const jspathCard = document.createElement("article");
+  jspathCard.className = "project-card project-card--jspath reveal";
+  jspathCard.dataset.project = "jspath";
+  jspathCard.innerHTML = `
+    <a
+      class="showcase-shell showcase-shell--jspath"
+      aria-label="Open JSPath (new tab)"
+      href="https://jspath.vercel.app"
+      target="_blank"
+      rel="noopener noreferrer"
+      data-tilt
+    >
+      <span class="showcase-bar" aria-hidden="true">
+        <span class="showcase-dots"><i></i><i></i><i></i></span>
+        <span class="showcase-address">jspath.vercel.app</span>
+        <span class="showcase-indicator">↗</span>
+      </span>
+      <div class="showcase-media showcase-media--jspath">
+        <div class="jspath-ui" aria-hidden="true">
+          <div class="jspath-sidebar">
+            <div class="jspath-logo">JS<span>Path</span></div>
+            <div class="jspath-nav-item jspath-nav-item--active">Learn</div>
+            <div class="jspath-nav-item">Practice</div>
+            <div class="jspath-nav-item">Challenges</div>
+            <div class="jspath-nav-item">Projects</div>
+            <div class="jspath-nav-item">Interview</div>
+          </div>
+          <div class="jspath-main">
+            <div class="jspath-topline"><span>MODULE 09</span><span>64%</span></div>
+            <h4>Functions &amp; execution</h4>
+            <p>Build a mental model you can actually use while writing code.</p>
+            <div class="jspath-code">
+              <div><span class="jspath-code-key">function</span> calculateTotal(items) {</div>
+              <div>&nbsp;&nbsp;<span class="jspath-code-key">return</span> items.reduce((sum, item) =&gt;</div>
+              <div>&nbsp;&nbsp;&nbsp;&nbsp;sum + item.price, 0</div>
+              <div>&nbsp;&nbsp;);</div>
+              <div>}</div>
+            </div>
+            <div class="jspath-footer">
+              <div><span>Practice</span><strong>12 exercises</strong></div>
+              <span class="jspath-action" aria-hidden="true">Continue lesson →</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <span class="showcase-meta">
+        <span>JSPath</span>
+        <span>JavaScript learning platform <span aria-hidden="true">↗</span></span>
+      </span>
+    </a>
+    <div class="project-copy">
+      <div class="project-number">01</div>
+      <div>
+        <p class="eyebrow">EdTech · Learning platform</p>
+        <h3>JSPath</h3>
+        <p>
+          A comprehensive JavaScript learning product combining structured lessons,
+          executable examples, exercises, challenges, projects, interview preparation,
+          progress systems, and an in-browser coding environment.
+        </p>
+        <div class="chip-row">
+          <span>React</span><span>Vite</span><span>Monaco Editor</span><span>Supabase</span>
+        </div>
+        <div class="inline-links">
+          <a href="https://jspath.vercel.app" target="_blank" rel="noopener noreferrer">Live product ↗</a>
+          <a href="https://github.com/allahverdi-dev/jspath" target="_blank" rel="noopener noreferrer">Repository ↗</a>
+        </div>
+      </div>
+    </div>`;
+
+  if (!projectList.querySelector('[data-project="jspath"]')) {
+    projectList.prepend(jspathCard);
+  }
+
+  const selectedDescription = selectedWork.querySelector(".section-heading > p");
+  if (selectedDescription) {
+    selectedDescription.textContent =
+      "A selection of shipped web products covering education, finance, discovery, and productivity.";
+  }
+
+  projectList.querySelectorAll(".project-number").forEach((number, index) => {
+    number.textContent = String(index + 1).padStart(2, "0");
+  });
+
+  const style = document.createElement("style");
+  style.dataset.movanePortfolio = "true";
+  style.textContent = `
+    .showcase-shell--movane .showcase-media {
+      aspect-ratio: 16 / 9;
+      background: #12202c;
+    }
+
+    .showcase-shell--movane .showcase-media > img {
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .movane-secondary-preview {
+      display: block;
+      margin-top: 18px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--showcase-radius);
+      background: var(--surface);
+      transition: transform 0.2s var(--ease), border-color 0.2s ease;
+    }
+
+    .movane-secondary-preview:hover {
+      transform: translateY(-2px);
+      border-color: var(--line-strong);
+    }
+
+    .movane-secondary-preview:focus-visible {
+      outline: 3px solid var(--accent-2);
+      outline-offset: 5px;
+    }
+
+    .movane-secondary-preview img {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    .movane-secondary-preview span {
+      display: block;
+      padding: 10px 13px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-family: var(--font-mono);
+      font-size: 10px;
+    }
+
+    .movane-secondary-preview:hover span {
+      color: var(--text);
+    }
+
+    .project-card--jspath .showcase-media {
+      background: #111514;
+    }
+
+    @media (max-width: 720px) {
+      .movane-secondary-preview {
+        margin-top: 14px;
+      }
+    }
+  `;
+  document.head.append(style);
+})();
+
+(() => {
+  "use strict";
+
   const root = document.documentElement;
   const themeToggle = document.getElementById("theme-toggle");
   const menuButton = document.getElementById("menu-button");
