@@ -1,212 +1,6 @@
 (() => {
   "use strict";
 
-  const flagship = document.querySelector("section.flagship#work");
-  const selectedWork = document.querySelector("section.selected-work");
-  const projectList = selectedWork?.querySelector(".project-list");
-
-  if (!flagship || !selectedWork || !projectList) return;
-
-  flagship.innerHTML = `
-    <div class="container">
-      <div class="section-heading reveal">
-        <div>
-          <span class="section-index">01 / Flagship</span>
-          <h2>MOVANE — supply chain operations, built as a real product.</h2>
-        </div>
-        <p>
-          My most complete enterprise frontend project — built around operational
-          workflows, simulation, data-heavy interfaces, and backend-ready architecture.
-        </p>
-      </div>
-
-      <div class="flagship-grid">
-        <div class="showcase-stage reveal">
-          <a
-            class="showcase-shell showcase-shell--flagship showcase-shell--movane"
-            href="https://movane.vercel.app"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Open MOVANE live demo (new tab)"
-            data-tilt
-          >
-            <span class="showcase-bar" aria-hidden="true">
-              <span class="showcase-dots"><i></i><i></i><i></i></span>
-              <span class="showcase-address">movane.vercel.app</span>
-              <span class="showcase-indicator">↗</span>
-            </span>
-            <span class="showcase-media">
-              <img
-                src="images/projects/movane-cover.webp"
-                alt="MOVANE supply chain control tower Command Center"
-                width="1280"
-                height="720"
-                decoding="async"
-              />
-            </span>
-            <span class="showcase-meta">
-              <span>MOVANE <span class="showcase-tag">Flagship</span></span>
-              <span>Supply Chain Control Tower <span aria-hidden="true">↗</span></span>
-            </span>
-          </a>
-
-          <p class="showcase-caption">Command Center · Global operations overview</p>
-        </div>
-
-        <div class="flagship-copy reveal">
-          <p class="eyebrow">Enterprise operations · Frontend product</p>
-          <h3>One operational view of shipments, suppliers, inventory, risk and disruption.</h3>
-          <p class="flagship-lede">
-            MOVANE is an enterprise supply chain control tower covering shipment
-            operations, supplier dependencies, warehouses, inventory, exceptions,
-            risk, route intelligence, cold-chain monitoring and public tracking.
-            Its Scenario Lab can simulate disruptions and compare their operational
-            impact before and after mitigation.
-          </p>
-
-          <div class="metric-grid" role="group" aria-label="MOVANE product metrics">
-            <div><strong>47</strong><span>Routes</span></div>
-            <div><strong>620</strong><span>Shipments</span></div>
-            <div><strong>154</strong><span>Tests</span></div>
-            <div><strong>14</strong><span>QA widths</span></div>
-          </div>
-
-          <div class="chip-row">
-            <span>React</span>
-            <span>TypeScript</span>
-            <span>Vite</span>
-            <span>MapLibre</span>
-            <span>TanStack</span>
-            <span>IndexedDB</span>
-          </div>
-
-          <div class="inline-links">
-            <a href="https://movane.vercel.app" target="_blank" rel="noopener noreferrer">Live demo ↗</a>
-            <a
-              href="https://verdihesenov.gumroad.com/l/movane-supply-chain-control-tower"
-              target="_blank"
-              rel="noopener noreferrer"
-            >View product ↗</a>
-          </div>
-
-          <div class="quality-note">
-            <span class="quality-dot"></span>
-            <p>
-              <strong>Built for depth:</strong> deterministic demo data, local persistence,
-              Scenario Lab, responsive product shell, automated testing, and repository
-              interfaces ready for a real backend.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>`;
-
-  const jspathCard = document.createElement("article");
-  jspathCard.className = "project-card project-card--jspath reveal";
-  jspathCard.dataset.project = "jspath";
-  jspathCard.innerHTML = `
-    <a
-      class="showcase-shell showcase-shell--jspath"
-      aria-label="Open JSPath (new tab)"
-      href="https://jspath.vercel.app"
-      target="_blank"
-      rel="noopener noreferrer"
-      data-tilt
-    >
-      <span class="showcase-bar" aria-hidden="true">
-        <span class="showcase-dots"><i></i><i></i><i></i></span>
-        <span class="showcase-address">jspath.vercel.app</span>
-        <span class="showcase-indicator">↗</span>
-      </span>
-      <div class="showcase-media showcase-media--jspath">
-        <div class="jspath-ui" aria-hidden="true">
-          <div class="jspath-sidebar">
-            <div class="jspath-logo">JS<span>Path</span></div>
-            <div class="jspath-nav-item jspath-nav-item--active">Learn</div>
-            <div class="jspath-nav-item">Practice</div>
-            <div class="jspath-nav-item">Challenges</div>
-            <div class="jspath-nav-item">Projects</div>
-            <div class="jspath-nav-item">Interview</div>
-          </div>
-          <div class="jspath-main">
-            <div class="jspath-topline"><span>MODULE 09</span><span>64%</span></div>
-            <h4>Functions &amp; execution</h4>
-            <p>Build a mental model you can actually use while writing code.</p>
-            <div class="jspath-code">
-              <div><span class="jspath-code-key">function</span> calculateTotal(items) {</div>
-              <div>&nbsp;&nbsp;<span class="jspath-code-key">return</span> items.reduce((sum, item) =&gt;</div>
-              <div>&nbsp;&nbsp;&nbsp;&nbsp;sum + item.price, 0</div>
-              <div>&nbsp;&nbsp;);</div>
-              <div>}</div>
-            </div>
-            <div class="jspath-footer">
-              <div><span>Practice</span><strong>12 exercises</strong></div>
-              <span class="jspath-action" aria-hidden="true">Continue lesson →</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <span class="showcase-meta">
-        <span>JSPath</span>
-        <span>JavaScript learning platform <span aria-hidden="true">↗</span></span>
-      </span>
-    </a>
-    <div class="project-copy">
-      <div class="project-number">01</div>
-      <div>
-        <p class="eyebrow">EdTech · Learning platform</p>
-        <h3>JSPath</h3>
-        <p>
-          A comprehensive JavaScript learning product combining structured lessons,
-          executable examples, exercises, challenges, projects, interview preparation,
-          progress systems, and an in-browser coding environment.
-        </p>
-        <div class="chip-row">
-          <span>React</span><span>Vite</span><span>Monaco Editor</span><span>Supabase</span>
-        </div>
-        <div class="inline-links">
-          <a href="https://jspath.vercel.app" target="_blank" rel="noopener noreferrer">Live product ↗</a>
-        </div>
-      </div>
-    </div>`;
-
-  if (!projectList.querySelector('[data-project="jspath"]')) {
-    projectList.prepend(jspathCard);
-  }
-
-  const selectedDescription = selectedWork.querySelector(".section-heading > p");
-  if (selectedDescription) {
-    selectedDescription.textContent =
-      "A selection of shipped web products covering education, finance, discovery, and productivity.";
-  }
-
-  projectList.querySelectorAll(".project-number").forEach((number, index) => {
-    number.textContent = String(index + 1).padStart(2, "0");
-  });
-
-  const style = document.createElement("style");
-  style.dataset.movanePortfolio = "true";
-  style.textContent = `
-    .showcase-shell--movane .showcase-media {
-      aspect-ratio: 16 / 9;
-      background: #12202c;
-    }
-
-    .showcase-shell--movane .showcase-media > img {
-      object-fit: cover;
-      object-position: center;
-    }
-
-    .project-card--jspath .showcase-media {
-      background: #111514;
-    }
-  `;
-  document.head.append(style);
-})();
-
-(() => {
-  "use strict";
-
   const root = document.documentElement;
   const themeToggle = document.getElementById("theme-toggle");
   const menuButton = document.getElementById("menu-button");
@@ -216,13 +10,29 @@
   const form = document.getElementById("inquiry-form");
   const formStatus = document.getElementById("form-status");
   const year = document.getElementById("year");
-  const themeColor = document.querySelector(
-    'meta[name="theme-color"]:not([media])',
-  );
+  const themeColor = document.querySelector('meta[name="theme-color"]:not([media])');
   const mobileMedia = window.matchMedia("(max-width: 720px)");
   const systemDark = window.matchMedia("(prefers-color-scheme: dark)");
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+  const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)");
 
   if (year) year.textContent = new Date().getFullYear();
+
+  const portfolioStyle = document.createElement("style");
+  portfolioStyle.textContent = `
+    .showcase-shell--movane .showcase-media {
+      aspect-ratio: 16 / 9;
+      background: #12202c;
+    }
+    .showcase-shell--movane .showcase-media > img {
+      object-fit: cover;
+      object-position: center;
+    }
+    .project-card--jspath .showcase-media {
+      background: #111514;
+    }
+  `;
+  document.head.append(portfolioStyle);
 
   const getEffectiveTheme = () => {
     const explicit = root.dataset.theme;
@@ -240,8 +50,9 @@
       "title",
       dark ? "Switch to light theme" : "Switch to dark theme",
     );
-    if (themeColor)
+    if (themeColor) {
       themeColor.setAttribute("content", dark ? "#111412" : "#f6f4ef");
+    }
   };
 
   syncThemeUi();
@@ -290,9 +101,7 @@
     navLinks?.classList.contains("is-open") ? closeMenu() : openMenu();
   });
 
-  navBackdrop?.addEventListener("click", () =>
-    closeMenu({ restoreFocus: true }),
-  );
+  navBackdrop?.addEventListener("click", () => closeMenu({ restoreFocus: true }));
   navLinks
     ?.querySelectorAll("a")
     .forEach((link) => link.addEventListener("click", () => closeMenu()));
@@ -311,6 +120,7 @@
       if (!focusable.length) return;
       const first = focusable[0];
       const last = focusable[focusable.length - 1];
+
       if (event.shiftKey && document.activeElement === first) {
         event.preventDefault();
         last.focus();
@@ -337,7 +147,6 @@
   });
 
   const revealItems = [...document.querySelectorAll(".reveal")];
-  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
   if (!reduceMotion.matches && "IntersectionObserver" in window) {
     revealItems.forEach((item) => item.classList.add("reveal-pending"));
@@ -368,6 +177,7 @@
           .filter((entry) => entry.isIntersecting)
           .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
         if (!visible) return;
+
         sectionLinks.forEach((link) => {
           const active = link.getAttribute("href") === `#${visible.target.id}`;
           if (active) link.setAttribute("aria-current", "page");
@@ -379,38 +189,35 @@
     sections.forEach((section) => spy.observe(section));
   }
 
-  const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)");
   const tiltItems = [...document.querySelectorAll("[data-tilt]")];
   const resetTilt = () =>
-    tiltItems.forEach((element) => {
-      element.style.removeProperty("transform");
-    });
+    tiltItems.forEach((element) => element.style.removeProperty("transform"));
 
   tiltItems.forEach((element) => {
     const reset = () => element.style.removeProperty("transform");
+
     element.addEventListener("pointermove", (event) => {
       if (
         reduceMotion.matches ||
         !finePointer.matches ||
         event.pointerType === "touch"
-      )
+      ) {
         return;
+      }
+
       const rect = element.getBoundingClientRect();
       if (!rect.width || !rect.height) return;
-      const x = Math.max(
-        0,
-        Math.min(1, (event.clientX - rect.left) / rect.width),
-      );
-      const y = Math.max(
-        0,
-        Math.min(1, (event.clientY - rect.top) / rect.height),
-      );
+
+      const x = Math.max(0, Math.min(1, (event.clientX - rect.left) / rect.width));
+      const y = Math.max(0, Math.min(1, (event.clientY - rect.top) / rect.height));
       element.style.transform = `perspective(1200px) rotateX(${(0.5 - y) * 2}deg) rotateY(${(x - 0.5) * 2.6}deg)`;
     });
+
     element.addEventListener("pointerleave", reset);
     element.addEventListener("pointercancel", reset);
     element.addEventListener("blur", reset);
   });
+
   finePointer.addEventListener?.("change", resetTilt);
   reduceMotion.addEventListener?.("change", () => {
     resetTilt();
@@ -425,11 +232,8 @@
 
     const submit = form.querySelector('button[type="submit"]');
     const original = submit?.textContent || "Send project inquiry";
-    const controller =
-      "AbortController" in window ? new AbortController() : null;
-    const timeout = controller
-      ? setTimeout(() => controller.abort(), 12000)
-      : null;
+    const controller = "AbortController" in window ? new AbortController() : null;
+    const timeout = controller ? setTimeout(() => controller.abort(), 12000) : null;
 
     if (submit) {
       submit.disabled = true;
@@ -445,11 +249,15 @@
         headers: { Accept: "application/json" },
         signal: controller?.signal,
       });
-      if (!response.ok)
+
+      if (!response.ok) {
         throw new Error(`Form submission failed: ${response.status}`);
+      }
+
       form.reset();
-      if (formStatus)
+      if (formStatus) {
         formStatus.textContent = "Thanks — your inquiry was sent successfully.";
+      }
     } catch (_) {
       if (formStatus) {
         formStatus.textContent =

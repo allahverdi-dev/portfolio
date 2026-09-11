@@ -3,63 +3,67 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Allahverdi Hasanov — Frontend Developer &amp; Web Builder</title>
+    <title>Allahverdi Hasanov — Frontend Developer for Startups &amp; Businesses</title>
     <meta
       name="description"
-      content="Frontend developer and independent web builder creating fast, responsive websites and web products for businesses, startups, and personal brands."
+      content="Frontend developer building polished websites, SaaS interfaces, MVP frontends, and responsive web products for startups, businesses, and personal brands."
     />
     <meta name="color-scheme" content="light dark" />
-    <meta
-      name="theme-color"
-      content="#f6f4ef"
-      media="(prefers-color-scheme: light)"
-    />
-    <meta
-      name="theme-color"
-      content="#111412"
-      media="(prefers-color-scheme: dark)"
-    />
+    <meta name="theme-color" content="#f6f4ef" />
+    <meta name="theme-color" content="#f6f4ef" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#111412" media="(prefers-color-scheme: dark)" />
     <link rel="canonical" href="https://allahverdi-dev.github.io/portfolio/" />
 
     <meta property="og:type" content="website" />
-    <meta
-      property="og:title"
-      content="Allahverdi Hasanov — Frontend Developer &amp; Web Builder"
-    />
-    <meta
-      property="og:description"
-      content="Fast, responsive websites and web products built with a product-minded frontend workflow."
-    />
-    <meta
-      property="og:url"
-      content="https://allahverdi-dev.github.io/portfolio/"
-    />
-    <meta name="twitter:card" content="summary" />
-    <meta
-      name="twitter:title"
-      content="Allahverdi Hasanov — Frontend Developer &amp; Web Builder"
-    />
-    <meta
-      name="twitter:description"
-      content="Fast, responsive websites and web products built with a product-minded frontend workflow."
-    />
+    <meta property="og:title" content="Allahverdi Hasanov — Frontend Developer for Startups &amp; Businesses" />
+    <meta property="og:description" content="Websites and product frontends built for real use — responsive, focused, tested, and ready to ship." />
+    <meta property="og:url" content="https://allahverdi-dev.github.io/portfolio/" />
+    <meta property="og:image" content="https://allahverdi-dev.github.io/portfolio/images/projects/movane-cover.webp" />
+    <meta property="og:image:alt" content="MOVANE supply chain control tower interface" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Allahverdi Hasanov — Frontend Developer" />
+    <meta name="twitter:description" content="Websites, SaaS interfaces, and MVP frontends for startups and businesses." />
+    <meta name="twitter:image" content="https://allahverdi-dev.github.io/portfolio/images/projects/movane-cover.webp" />
 
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;family=Libre+Caslon+Text:ital@0;1&amp;display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;family=Libre+Caslon+Text:ital@0;1&amp;display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
+
+    <style>
+      :root { --faint: #646a66; }
+      .nav-links a[aria-current="page"]::after { transform: scaleX(1); transform-origin: left; }
+      .service-grid { grid-template-columns: repeat(2, 1fr); }
+      .service-card:nth-child(2n) { border-right: 0; }
+      .service-card:nth-child(-n + 2) { border-bottom: 1px solid var(--line); }
+      @media (max-width: 980px) {
+        .service-grid { grid-template-columns: 1fr; }
+        .service-card, .service-card:nth-child(2n) { border-right: 0; border-bottom: 1px solid var(--line); }
+        .service-card:last-child { border-bottom: 0; }
+      }
+    </style>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Allahverdi Hasanov",
+        "url": "https://allahverdi-dev.github.io/portfolio/",
+        "jobTitle": "Frontend Developer",
+        "sameAs": [
+          "https://github.com/allahverdi-dev",
+          "https://www.linkedin.com/in/allahverdi-hasanov/"
+        ],
+        "knowsAbout": ["Frontend Development", "React", "TypeScript", "Responsive Web Design", "Web Applications"]
+      }
+    </script>
 
     <script>
       (function () {
         try {
           const stored = localStorage.getItem("theme");
-          if (stored === "light" || stored === "dark") {
-            document.documentElement.dataset.theme = stored;
-          }
+          if (stored === "light" || stored === "dark") document.documentElement.dataset.theme = stored;
         } catch (_) {}
       })();
     </script>
@@ -72,10 +76,7 @@
       <div class="container header-inner">
         <a class="brand" href="#top" aria-label="Allahverdi Hasanov — home">
           <span class="brand-mark">AH</span>
-          <span class="brand-copy">
-            <strong>Allahverdi Hasanov</strong>
-            <small>Frontend Developer</small>
-          </span>
+          <span class="brand-copy"><strong>Allahverdi Hasanov</strong><small>Frontend Developer</small></span>
         </a>
 
         <nav class="nav" aria-label="Primary navigation">
@@ -85,78 +86,16 @@
             <a href="#about">About</a>
             <a href="#contact">Contact</a>
           </div>
-
           <div class="nav-backdrop" id="nav-backdrop" aria-hidden="true"></div>
-
           <div class="header-actions">
-            <a
-              class="icon-button"
-              href="https://github.com/allahverdi-dev"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="GitHub profile"
-            >
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path
-                  fill="currentColor"
-                  d="M12 2.5a9.5 9.5 0 0 0-3 18.52c.48.09.66-.21.66-.47v-1.65c-2.69.58-3.26-1.14-3.26-1.14-.44-1.12-1.08-1.42-1.08-1.42-.88-.6.07-.59.07-.59.97.07 1.48 1 1.48 1 .87 1.49 2.29 1.06 2.85.81.09-.63.34-1.06.62-1.3-2.15-.24-4.41-1.08-4.41-4.8 0-1.06.38-1.93 1-2.61-.1-.25-.43-1.24.1-2.58 0 0 .82-.26 2.67 1a9.25 9.25 0 0 1 4.86 0c1.85-1.26 2.67-1 2.67-1 .53 1.34.2 2.33.1 2.58.62.68 1 1.55 1 2.61 0 3.73-2.27 4.55-4.43 4.79.35.3.66.88.66 1.77v2.63c0 .26.17.57.67.47A9.5 9.5 0 0 0 12 2.5Z"
-                />
-              </svg>
+            <a class="icon-button" href="https://github.com/allahverdi-dev" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.5a9.5 9.5 0 0 0-3 18.52c.48.09.66-.21.66-.47v-1.65c-2.69.58-3.26-1.14-3.26-1.14-.44-1.12-1.08-1.42-1.08-1.42-.88-.6.07-.59.07-.59.97.07 1.48 1 1.48 1 .87 1.49 2.29 1.06 2.85.81.09-.63.34-1.06.62-1.3-2.15-.24-4.41-1.08-4.41-4.8 0-1.06.38-1.93 1-2.61-.1-.25-.43-1.24.1-2.58 0 0 .82-.26 2.67 1a9.25 9.25 0 0 1 4.86 0c1.85-1.26 2.67-1 2.67-1 .53 1.34.2 2.33.1 2.58.62.68 1 1.55 1 2.61 0 3.73-2.27 4.55-4.43 4.79.35.3.66.88.66 1.77v2.63c0 .26.17.57.67.47A9.5 9.5 0 0 0 12 2.5Z" /></svg>
             </a>
-
-            <button
-              class="icon-button"
-              id="theme-toggle"
-              type="button"
-              aria-label="Toggle color theme"
-            >
-              <svg
-                class="theme-icon theme-icon--sun"
-                viewBox="0 0 24 24"
-                aria-hidden="true"
-              >
-                <circle
-                  cx="12"
-                  cy="12"
-                  r="4"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.8"
-                />
-                <path
-                  d="M12 2v2.5M12 19.5V22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M2 12h2.5M19.5 12H22M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.8"
-                  stroke-linecap="round"
-                />
-              </svg>
-              <svg
-                class="theme-icon theme-icon--moon"
-                viewBox="0 0 24 24"
-                aria-hidden="true"
-              >
-                <path
-                  d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.6 6.6 0 0 0 10.5 10.5Z"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.8"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
+            <button class="icon-button" id="theme-toggle" type="button" aria-label="Toggle color theme">
+              <svg class="theme-icon theme-icon--sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 2v2.5M12 19.5V22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M2 12h2.5M19.5 12H22M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+              <svg class="theme-icon theme-icon--moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.6 6.6 0 0 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </button>
-
-            <button
-              class="menu-button"
-              id="menu-button"
-              type="button"
-              aria-label="Toggle navigation"
-              aria-expanded="false"
-              aria-controls="nav-links"
-            >
-              <span></span><span></span>
-            </button>
+            <button class="menu-button" id="menu-button" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links"><span></span><span></span></button>
           </div>
         </nav>
       </div>
@@ -166,204 +105,58 @@
       <section class="hero">
         <div class="container hero-grid">
           <div class="hero-copy reveal">
-            <p class="availability">
-              <span></span> Available for freelance &amp; remote opportunities
-            </p>
-            <h1>
-              I build web experiences that make the next action
-              <em>obvious.</em>
-            </h1>
-            <p class="hero-lede">
-              Frontend development for businesses, products, and personal brands
-              — responsive, focused, accessible, and built to ship.
-            </p>
+            <p class="availability"><span></span> Available for freelance &amp; remote projects</p>
+            <h1>I build websites and product frontends that make the next action <em>obvious.</em></h1>
+            <p class="hero-lede">For startups, businesses, and personal brands that need a polished interface — responsive, accessible, focused, and ready to ship.</p>
             <div class="hero-actions">
-              <a class="button button--primary" href="#contact"
-                >Start a project</a
-              >
-              <a class="button button--ghost" href="#work"
-                >Explore selected work</a
-              >
+              <a class="button button--primary" href="#contact">Start a project</a>
+              <a class="button button--ghost" href="#work">See what I build</a>
             </div>
           </div>
-
           <aside class="hero-proof reveal" aria-label="Professional summary">
-            <p class="mono-label">Currently focused on</p>
-            <div class="proof-row">
-              <span>01</span>
-              <strong>Frontend engineering</strong>
-            </div>
-            <div class="proof-row">
-              <span>02</span>
-              <strong>Product UI implementation</strong>
-            </div>
-            <div class="proof-row">
-              <span>03</span>
-              <strong>Business websites</strong>
-            </div>
-            <p class="proof-location">
-              Lankaran, Azerbaijan · Working globally
-            </p>
+            <p class="mono-label">Best fit for</p>
+            <div class="proof-row"><span>01</span><strong>SaaS &amp; MVP frontends</strong></div>
+            <div class="proof-row"><span>02</span><strong>Business websites</strong></div>
+            <div class="proof-row"><span>03</span><strong>Frontend upgrades</strong></div>
+            <p class="proof-location">Lankaran, Azerbaijan · Working globally</p>
           </aside>
         </div>
       </section>
 
       <section class="proof-strip" aria-label="Capabilities">
         <div class="container proof-strip-inner">
-          <span>Responsive by default</span>
-          <span>Accessible UI</span>
-          <span>Performance-aware</span>
-          <span>Clear scope</span>
-          <span>Deployment included</span>
+          <span>Responsive by default</span><span>Accessible UI</span><span>Performance-aware</span><span>Clear scope</span><span>Deployment included</span>
         </div>
       </section>
 
       <section class="section flagship" id="work">
         <div class="container">
           <div class="section-heading reveal">
-            <div>
-              <span class="section-index">01 / Flagship</span>
-              <h2>JSPath — a learning product built at real scale.</h2>
-            </div>
-            <p>
-              The strongest example of how I approach product structure,
-              frontend systems, content architecture, testing, and iteration.
-            </p>
+            <div><span class="section-index">01 / Flagship</span><h2>MOVANE — supply chain operations, built as a real product.</h2></div>
+            <p>My most complete enterprise frontend project — built around operational workflows, simulation, data-heavy interfaces, and backend-ready architecture.</p>
           </div>
-
           <div class="flagship-grid">
             <div class="showcase-stage reveal">
-              <a
-                class="showcase-shell showcase-shell--flagship"
-                href="https://jspath.vercel.app"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Open JSPath — stylized learning platform preview (new tab)"
-                data-tilt
-              >
-                <span class="showcase-bar" aria-hidden="true">
-                  <span class="showcase-dots"><i></i><i></i><i></i></span>
-                  <span class="showcase-address">jspath.vercel.app</span>
-                  <span class="showcase-indicator">↗</span>
-                </span>
-                <div class="showcase-media showcase-media--jspath">
-                  <div class="jspath-ui" aria-hidden="true">
-                    <div class="jspath-sidebar">
-                      <div class="jspath-logo">JS<span>Path</span></div>
-                      <div class="jspath-nav-item jspath-nav-item--active">
-                        Learn
-                      </div>
-                      <div class="jspath-nav-item">Practice</div>
-                      <div class="jspath-nav-item">Challenges</div>
-                      <div class="jspath-nav-item">Projects</div>
-                      <div class="jspath-nav-item">Interview</div>
-                    </div>
-
-                    <div class="jspath-main">
-                      <div class="jspath-topline">
-                        <span>MODULE 09</span>
-                        <span>64%</span>
-                      </div>
-                      <h4>Functions &amp; execution</h4>
-                      <p>
-                        Build a mental model you can actually use while writing
-                        code.
-                      </p>
-
-                      <div class="jspath-code">
-                        <div>
-                          <span class="jspath-code-key">function</span>
-                          calculateTotal(items) {
-                        </div>
-                        <div>
-                          &nbsp;&nbsp;<span class="jspath-code-key"
-                            >return</span
-                          >
-                          items.reduce((sum, item) =&gt;
-                        </div>
-                        <div>&nbsp;&nbsp;&nbsp;&nbsp;sum + item.price, 0</div>
-                        <div>&nbsp;&nbsp;);</div>
-                        <div>}</div>
-                      </div>
-
-                      <div class="jspath-footer">
-                        <div>
-                          <span>Practice</span>
-                          <strong>12 exercises</strong>
-                        </div>
-                        <span class="jspath-action" aria-hidden="true"
-                          >Continue lesson →</span
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <span class="showcase-meta"
-                  ><span>JSPath <span class="showcase-tag">Flagship</span></span
-                  ><span
-                    >Learning platform <span aria-hidden="true">↗</span></span
-                  ></span
-                >
+              <a class="showcase-shell showcase-shell--flagship showcase-shell--movane" href="https://movane.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="Open MOVANE live demo (new tab)" data-tilt>
+                <span class="showcase-bar" aria-hidden="true"><span class="showcase-dots"><i></i><i></i><i></i></span><span class="showcase-address">movane.vercel.app</span><span class="showcase-indicator">↗</span></span>
+                <span class="showcase-media"><img src="images/projects/movane-cover.webp" alt="MOVANE supply chain control tower Command Center" width="1280" height="720" decoding="async" /></span>
+                <span class="showcase-meta"><span>MOVANE <span class="showcase-tag">Flagship</span></span><span>Supply Chain Control Tower <span aria-hidden="true">↗</span></span></span>
               </a>
-              <p class="showcase-caption">
-                Interface preview · Lessons, code &amp; practice
-              </p>
+              <p class="showcase-caption">Command Center · Global operations overview</p>
             </div>
             <div class="flagship-copy reveal">
-              <p class="eyebrow">JavaScript learning platform</p>
-              <h3>
-                From curriculum to code runner, one connected learning system.
-              </h3>
-              <p class="flagship-lede">
-                JSPath is a comprehensive JavaScript learning platform combining
-                structured lessons, executable examples, exercises, quizzes,
-                coding challenges, projects, interview preparation, reference
-                content, progress systems, and an in-browser coding environment.
-              </p>
-
-              <div
-                class="metric-grid"
-                role="group"
-                aria-label="JSPath product metrics"
-              >
-                <div><strong>214</strong><span>Lessons</span></div>
-                <div><strong>810</strong><span>Exercises</span></div>
-                <div><strong>171</strong><span>Challenges</span></div>
-                <div><strong>31</strong><span>Projects</span></div>
+              <p class="eyebrow">Enterprise operations · Frontend product</p>
+              <h3>One operational view of shipments, suppliers, inventory, risk and disruption.</h3>
+              <p class="flagship-lede">MOVANE is an enterprise supply chain control tower covering shipment operations, supplier dependencies, warehouses, inventory, exceptions, risk, route intelligence, cold-chain monitoring and public tracking. Its Scenario Lab can simulate disruptions and compare operational impact before and after mitigation.</p>
+              <div class="metric-grid" role="group" aria-label="MOVANE product metrics">
+                <div><strong>47</strong><span>Routes</span></div><div><strong>620</strong><span>Shipments</span></div><div><strong>154</strong><span>Tests</span></div><div><strong>14</strong><span>QA widths</span></div>
               </div>
-
-              <div class="chip-row">
-                <span>React</span>
-                <span>Vite</span>
-                <span>Monaco Editor</span>
-                <span>Supabase</span>
-                <span>Vitest</span>
-                <span>GitHub Actions</span>
-              </div>
-
+              <div class="chip-row"><span>React</span><span>TypeScript</span><span>Vite</span><span>MapLibre</span><span>TanStack</span><span>IndexedDB</span></div>
               <div class="inline-links">
-                <a
-                  href="https://jspath.vercel.app"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Open JSPath ↗</a
-                >
-                <a
-                  href="https://github.com/allahverdi-dev/jspath"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >View repository ↗</a
-                >
+                <a href="https://movane.vercel.app" target="_blank" rel="noopener noreferrer">Live demo ↗</a>
+                <a href="https://verdihesenov.gumroad.com/l/movane-supply-chain-control-tower" target="_blank" rel="noopener noreferrer">View product ↗</a>
               </div>
-
-              <div class="quality-note">
-                <span class="quality-dot"></span>
-                <p>
-                  <strong>Quality gates:</strong> production build, lint, tests,
-                  content audit, reference-solution verification, and
-                  runnable-example verification.
-                </p>
-              </div>
+              <div class="quality-note"><span class="quality-dot"></span><p><strong>Built for depth:</strong> deterministic demo data, local persistence, Scenario Lab, responsive product shell, automated testing, and repository interfaces ready for a real backend.</p></div>
             </div>
           </div>
         </div>
@@ -372,209 +165,50 @@
       <section class="section selected-work">
         <div class="container">
           <div class="section-heading reveal">
-            <div>
-              <span class="section-index">02 / Selected work</span>
-              <h2>Different products. The same focus on usable interfaces.</h2>
-            </div>
-            <p>
-              A selection of shipped web products covering education, finance,
-              discovery, and productivity.
-            </p>
+            <div><span class="section-index">02 / Selected work</span><h2>Different products. The same focus on usable interfaces.</h2></div>
+            <p>Shipped work across education, finance, discovery, and product interfaces — from focused web apps to larger frontend systems.</p>
           </div>
 
           <div class="project-list">
-            <article class="project-card reveal">
-              <a
-                class="showcase-shell showcase-shell--langart"
-                aria-label="Open LangArt (new tab)"
-                href="https://langart-beta.vercel.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-                data-tilt
-              >
-                <span class="showcase-bar" aria-hidden="true">
-                  <span class="showcase-dots"><i></i><i></i><i></i></span>
-                  <span class="showcase-address">langart-beta.vercel.app</span>
-                  <span class="showcase-indicator">↗</span>
-                </span>
-                <span class="showcase-media">
-                  <img
-                    src="images/projects/langart-cover.png"
-                    alt="LangArt learning platform interface"
-                    width="1600"
-                    height="800"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </span>
-                <span class="showcase-meta"
-                  ><span>LangArt</span
-                  ><span
-                    >Student &amp; teacher tools
-                    <span aria-hidden="true">↗</span></span
-                  ></span
-                >
-              </a>
-              <div class="project-copy">
-                <div class="project-number">01</div>
-                <div>
-                  <p class="eyebrow">EdTech · Frontend product</p>
-                  <h3>LangArt</h3>
-                  <p>
-                    A learning platform with dedicated student and teacher
-                    experiences, lesson flows, vocabulary tools, progress
-                    tracking, scheduling, and assignments.
-                  </p>
-                  <div class="chip-row">
-                    <span>React</span><span>TypeScript</span><span>Vite</span
-                    ><span>Tailwind CSS</span>
-                  </div>
-                  <div class="inline-links">
-                    <a
-                      href="https://langart-beta.vercel.app/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      >Live product ↗</a
-                    >
-                    <a
-                      href="https://verdihesenov.gumroad.com/l/langart-edtech"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      >Product page ↗</a
-                    >
+            <article class="project-card project-card--jspath reveal" data-project="jspath">
+              <a class="showcase-shell showcase-shell--jspath" aria-label="Open JSPath (new tab)" href="https://jspath.vercel.app" target="_blank" rel="noopener noreferrer" data-tilt>
+                <span class="showcase-bar" aria-hidden="true"><span class="showcase-dots"><i></i><i></i><i></i></span><span class="showcase-address">jspath.vercel.app</span><span class="showcase-indicator">↗</span></span>
+                <div class="showcase-media showcase-media--jspath">
+                  <div class="jspath-ui" aria-hidden="true">
+                    <div class="jspath-sidebar"><div class="jspath-logo">JS<span>Path</span></div><div class="jspath-nav-item jspath-nav-item--active">Learn</div><div class="jspath-nav-item">Practice</div><div class="jspath-nav-item">Challenges</div><div class="jspath-nav-item">Projects</div><div class="jspath-nav-item">Interview</div></div>
+                    <div class="jspath-main"><div class="jspath-topline"><span>MODULE 09</span><span>64%</span></div><h4>Functions &amp; execution</h4><p>Build a mental model you can actually use while writing code.</p><div class="jspath-code"><div><span class="jspath-code-key">function</span> calculateTotal(items) {</div><div>&nbsp;&nbsp;<span class="jspath-code-key">return</span> items.reduce((sum, item) =&gt;</div><div>&nbsp;&nbsp;&nbsp;&nbsp;sum + item.price, 0</div><div>&nbsp;&nbsp;);</div><div>}</div></div><div class="jspath-footer"><div><span>Practice</span><strong>12 exercises</strong></div><span class="jspath-action" aria-hidden="true">Continue lesson →</span></div></div>
                   </div>
                 </div>
-              </div>
+                <span class="showcase-meta"><span>JSPath</span><span>JavaScript learning platform <span aria-hidden="true">↗</span></span></span>
+              </a>
+              <div class="project-copy"><div class="project-number">01</div><div><p class="eyebrow">EdTech · Learning platform</p><h3>JSPath</h3><p>A comprehensive JavaScript learning product combining structured lessons, executable examples, exercises, challenges, projects, interview preparation, progress systems, and an in-browser coding environment.</p><div class="chip-row"><span>React</span><span>Vite</span><span>Monaco Editor</span><span>Supabase</span></div><div class="inline-links"><a href="https://jspath.vercel.app" target="_blank" rel="noopener noreferrer">Live product ↗</a><a href="https://github.com/allahverdi-dev/jspath" target="_blank" rel="noopener noreferrer">Repository ↗</a></div></div></div>
             </article>
 
             <article class="project-card reveal">
-              <a
-                class="showcase-shell showcase-shell--finora"
-                aria-label="Open Finora (new tab)"
-                href="https://allahverdi-dev.github.io/finora/"
-                target="_blank"
-                rel="noopener noreferrer"
-                data-tilt
-              >
-                <span class="showcase-bar" aria-hidden="true">
-                  <span class="showcase-dots"><i></i><i></i><i></i></span>
-                  <span class="showcase-address"
-                    >allahverdi-dev.github.io/finora</span
-                  >
-                  <span class="showcase-indicator">↗</span>
-                </span>
-                <span class="showcase-media">
-                  <img
-                    src="images/projects/finora-light.jpg"
-                    alt="Finora personal finance dashboard"
-                    width="1600"
-                    height="1000"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </span>
-                <span class="showcase-meta"
-                  ><span>Finora</span
-                  ><span
-                    >Personal finance <span aria-hidden="true">↗</span></span
-                  ></span
-                >
+              <a class="showcase-shell showcase-shell--langart" aria-label="Open LangArt (new tab)" href="https://langart-beta.vercel.app/" target="_blank" rel="noopener noreferrer" data-tilt>
+                <span class="showcase-bar" aria-hidden="true"><span class="showcase-dots"><i></i><i></i><i></i></span><span class="showcase-address">langart-beta.vercel.app</span><span class="showcase-indicator">↗</span></span>
+                <span class="showcase-media"><img src="images/projects/langart-cover.png" alt="LangArt learning platform interface" width="1600" height="800" loading="lazy" decoding="async" /></span>
+                <span class="showcase-meta"><span>LangArt</span><span>Student &amp; teacher tools <span aria-hidden="true">↗</span></span></span>
               </a>
-              <div class="project-copy">
-                <div class="project-number">02</div>
-                <div>
-                  <p class="eyebrow">Finance · Local-first web app</p>
-                  <h3>Finora</h3>
-                  <p>
-                    A privacy-first personal finance dashboard for transactions,
-                    budgets, recurring payments, savings goals, analytics, and
-                    portable data.
-                  </p>
-                  <div class="chip-row">
-                    <span>HTML</span><span>CSS</span><span>JavaScript</span
-                    ><span>IndexedDB</span>
-                  </div>
-                  <div class="inline-links">
-                    <a
-                      href="https://allahverdi-dev.github.io/finora/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      >Live product ↗</a
-                    >
-                    <a
-                      href="https://github.com/allahverdi-dev/finora"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      >Repository ↗</a
-                    >
-                  </div>
-                </div>
-              </div>
+              <div class="project-copy"><div class="project-number">02</div><div><p class="eyebrow">EdTech · Frontend product</p><h3>LangArt</h3><p>A learning platform with dedicated student and teacher experiences, lesson flows, vocabulary tools, progress tracking, scheduling, and assignments.</p><div class="chip-row"><span>React</span><span>TypeScript</span><span>Vite</span><span>Tailwind CSS</span></div><div class="inline-links"><a href="https://langart-beta.vercel.app/" target="_blank" rel="noopener noreferrer">Live product ↗</a><a href="https://verdihesenov.gumroad.com/l/langart-edtech" target="_blank" rel="noopener noreferrer">Product page ↗</a></div></div></div>
             </article>
 
             <article class="project-card reveal">
-              <a
-                class="showcase-shell showcase-shell--cinescope"
-                aria-label="Open CineScope (new tab)"
-                href="https://cinescope.allahverdihesenov42.workers.dev/"
-                target="_blank"
-                rel="noopener noreferrer"
-                data-tilt
-              >
-                <span class="showcase-bar" aria-hidden="true">
-                  <span class="showcase-dots"><i></i><i></i><i></i></span>
-                  <span class="showcase-address"
-                    >cinescope.allahverdihesenov42.workers.dev</span
-                  >
-                  <span class="showcase-indicator">↗</span>
-                </span>
-                <span class="showcase-media">
-                  <img
-                    src="images/projects/cinescope-cover.jpg"
-                    alt="CineScope movie discovery interface"
-                    width="1600"
-                    height="1000"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </span>
-                <span class="showcase-meta"
-                  ><span>CineScope</span
-                  ><span
-                    >Movie discovery <span aria-hidden="true">↗</span></span
-                  ></span
-                >
+              <a class="showcase-shell showcase-shell--finora" aria-label="Open Finora (new tab)" href="https://allahverdi-dev.github.io/finora/" target="_blank" rel="noopener noreferrer" data-tilt>
+                <span class="showcase-bar" aria-hidden="true"><span class="showcase-dots"><i></i><i></i><i></i></span><span class="showcase-address">allahverdi-dev.github.io/finora</span><span class="showcase-indicator">↗</span></span>
+                <span class="showcase-media"><img src="images/projects/finora-light.jpg" alt="Finora personal finance dashboard" width="1600" height="1000" loading="lazy" decoding="async" /></span>
+                <span class="showcase-meta"><span>Finora</span><span>Personal finance <span aria-hidden="true">↗</span></span></span>
               </a>
-              <div class="project-copy">
-                <div class="project-number">03</div>
-                <div>
-                  <p class="eyebrow">Entertainment · Web application</p>
-                  <h3>CineScope</h3>
-                  <p>
-                    A cinematic movie discovery experience with trending titles,
-                    search, filtering, detailed movie pages, trailers, and a
-                    personal watchlist.
-                  </p>
-                  <div class="chip-row">
-                    <span>HTML</span><span>CSS</span><span>JavaScript</span
-                    ><span>TMDB API</span>
-                  </div>
-                  <div class="inline-links">
-                    <a
-                      href="https://cinescope.allahverdihesenov42.workers.dev/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      >Live product ↗</a
-                    >
-                    <a
-                      href="https://github.com/allahverdi-dev/cinescope"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      >Repository ↗</a
-                    >
-                  </div>
-                </div>
-              </div>
+              <div class="project-copy"><div class="project-number">03</div><div><p class="eyebrow">Finance · Local-first web app</p><h3>Finora</h3><p>A privacy-first personal finance dashboard for transactions, budgets, recurring payments, savings goals, analytics, and portable data.</p><div class="chip-row"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>IndexedDB</span></div><div class="inline-links"><a href="https://allahverdi-dev.github.io/finora/" target="_blank" rel="noopener noreferrer">Live product ↗</a><a href="https://github.com/allahverdi-dev/finora" target="_blank" rel="noopener noreferrer">Repository ↗</a></div></div></div>
+            </article>
+
+            <article class="project-card reveal">
+              <a class="showcase-shell showcase-shell--cinescope" aria-label="Open CineScope (new tab)" href="https://cinescope.allahverdihesenov42.workers.dev/" target="_blank" rel="noopener noreferrer" data-tilt>
+                <span class="showcase-bar" aria-hidden="true"><span class="showcase-dots"><i></i><i></i><i></i></span><span class="showcase-address">cinescope.allahverdihesenov42.workers.dev</span><span class="showcase-indicator">↗</span></span>
+                <span class="showcase-media"><img src="images/projects/cinescope-cover.jpg" alt="CineScope movie discovery interface" width="1600" height="1000" loading="lazy" decoding="async" /></span>
+                <span class="showcase-meta"><span>CineScope</span><span>Movie discovery <span aria-hidden="true">↗</span></span></span>
+              </a>
+              <div class="project-copy"><div class="project-number">04</div><div><p class="eyebrow">Entertainment · Web application</p><h3>CineScope</h3><p>A cinematic movie discovery experience with trending titles, search, filtering, detailed movie pages, trailers, and a personal watchlist.</p><div class="chip-row"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>TMDB API</span></div><div class="inline-links"><a href="https://cinescope.allahverdihesenov42.workers.dev/" target="_blank" rel="noopener noreferrer">Live product ↗</a><a href="https://github.com/allahverdi-dev/cinescope" target="_blank" rel="noopener noreferrer">Repository ↗</a></div></div></div>
             </article>
           </div>
         </div>
@@ -583,154 +217,52 @@
       <section class="section services" id="services">
         <div class="container">
           <div class="section-heading reveal">
-            <div>
-              <span class="section-index">03 / Services</span>
-              <h2>Focused offers for businesses that need to ship.</h2>
-            </div>
-            <p>
-              Defined starting points keep scope clear. Final quotes depend on
-              content, complexity, integrations, and delivery requirements.
-            </p>
+            <div><span class="section-index">03 / Services</span><h2>Clear ways to work together.</h2></div>
+            <p>Start with the outcome you need. Scope, timeline, and final quote are agreed before implementation begins.</p>
           </div>
 
           <div class="service-grid">
             <article class="service-card reveal">
-              <div class="service-top">
-                <span class="service-number">01</span>
-                <p class="mono-label">Single-page launch</p>
-              </div>
-              <h3>Launch Page</h3>
-              <p>
-                For a product, service, campaign, creator, or personal brand
-                that needs one strong conversion-focused page.
-              </p>
-              <p class="price"><span>From</span> $149</p>
-              <ul>
-                <li>Responsive single-page build</li>
-                <li>Clear CTA and section hierarchy</li>
-                <li>Basic SEO and metadata</li>
-                <li>Contact/form integration</li>
-                <li>Deployment + 2 revision rounds</li>
-              </ul>
-              <a
-                class="button button--ghost service-cta"
-                href="#contact"
-                data-project="Launch Page"
-                >Discuss a launch page</a
-              >
-            </article>
-
-            <article class="service-card service-card--featured reveal">
-              <div class="service-top">
-                <span class="service-number">02</span>
-                <p class="mono-label">Business presence</p>
-              </div>
-              <h3>Business Website</h3>
-              <p>
-                For a small business that needs a professional online presence
-                with clearer information and stronger mobile UX.
-              </p>
-              <p class="price"><span>From</span> $349</p>
-              <ul>
-                <li>Up to 5 responsive pages</li>
-                <li>Tailored interface direction</li>
-                <li>Contact and social integrations</li>
-                <li>Basic on-page SEO</li>
-                <li>Deployment + 2 revision rounds</li>
-              </ul>
-              <a
-                class="button button--primary service-cta"
-                href="#contact"
-                data-project="Business Website"
-                >Discuss a business site</a
-              >
+              <div class="service-top"><span class="service-number">01</span><p class="mono-label">Single-page launch</p></div>
+              <h3>Launch Page</h3><p>For a product, service, campaign, creator, or personal brand that needs one strong conversion-focused page.</p><p class="price"><span>From</span> $149</p>
+              <ul><li>Responsive single-page build</li><li>Clear CTA and section hierarchy</li><li>Basic SEO and metadata</li><li>Contact/form integration</li><li>Deployment + 2 revision rounds</li></ul>
+              <a class="button button--ghost service-cta" href="#contact" data-project="Launch Page">Discuss a launch page</a>
             </article>
 
             <article class="service-card reveal">
-              <div class="service-top">
-                <span class="service-number">03</span>
-                <p class="mono-label">Existing product</p>
-              </div>
-              <h3>Frontend Upgrade</h3>
-              <p>
-                For an existing website that feels dated, weak on mobile,
-                inconsistent, or difficult to use.
-              </p>
-              <p class="price"><span>From</span> $199</p>
-              <ul>
-                <li>UI and responsive improvements</li>
-                <li>Layout and component cleanup</li>
-                <li>Interaction refinement</li>
-                <li>Performance-focused fixes</li>
-                <li>Scope agreed before implementation</li>
-              </ul>
-              <a
-                class="button button--ghost service-cta"
-                href="#contact"
-                data-project="Frontend Upgrade"
-                >Improve an existing site</a
-              >
+              <div class="service-top"><span class="service-number">02</span><p class="mono-label">Business presence</p></div>
+              <h3>Business Website</h3><p>For a business that needs a professional online presence with clearer information, stronger mobile UX, and a direct path to inquiry.</p><p class="price"><span>From</span> $349</p>
+              <ul><li>Up to 5 responsive pages</li><li>Tailored interface direction</li><li>Contact and social integrations</li><li>Basic on-page SEO</li><li>Deployment + 2 revision rounds</li></ul>
+              <a class="button button--ghost service-cta" href="#contact" data-project="Business Website">Discuss a business site</a>
+            </article>
+
+            <article class="service-card service-card--featured reveal">
+              <div class="service-top"><span class="service-number">03</span><p class="mono-label">Startup &amp; product</p></div>
+              <h3>Web App / MVP Frontend</h3><p>For founders and teams that need a polished frontend for a SaaS product, dashboard, MVP, internal tool, or product prototype.</p><p class="price"><span>From</span> $599</p>
+              <ul><li>React / TypeScript implementation</li><li>Responsive product UI</li><li>Reusable component structure</li><li>API-ready frontend boundaries</li><li>Testing and deployment support</li></ul>
+              <a class="button button--primary service-cta" href="#contact" data-project="Web Application">Discuss a product frontend</a>
+            </article>
+
+            <article class="service-card reveal">
+              <div class="service-top"><span class="service-number">04</span><p class="mono-label">Existing product</p></div>
+              <h3>Frontend Upgrade</h3><p>For an existing website or product that feels dated, weak on mobile, inconsistent, slow, or difficult to use.</p><p class="price"><span>From</span> $199</p>
+              <ul><li>UI and responsive improvements</li><li>Layout and component cleanup</li><li>Interaction refinement</li><li>Performance-focused fixes</li><li>Scope agreed before implementation</li></ul>
+              <a class="button button--ghost service-cta" href="#contact" data-project="Frontend Upgrade">Improve an existing frontend</a>
             </article>
           </div>
 
-          <div class="included-bar reveal">
-            <span>Every project includes</span>
-            <div>
-              <strong>Mobile-first QA</strong>
-              <strong>Accessibility basics</strong>
-              <strong>Performance review</strong>
-              <strong>Deployment support</strong>
-            </div>
-          </div>
+          <div class="included-bar reveal"><span>Every project includes</span><div><strong>Mobile-first QA</strong><strong>Accessibility basics</strong><strong>Performance review</strong><strong>Deployment support</strong></div></div>
         </div>
       </section>
 
       <section class="section process">
         <div class="container">
-          <div class="section-heading reveal">
-            <div>
-              <span class="section-index">04 / Process</span>
-              <h2>A short path from idea to shipped website.</h2>
-            </div>
-            <p>
-              No mystery process. Scope first, implementation second, launch
-              after validation.
-            </p>
-          </div>
-
+          <div class="section-heading reveal"><div><span class="section-index">04 / Process</span><h2>A short path from idea to shipped product.</h2></div><p>No mystery process. Scope first, implementation second, launch after validation.</p></div>
           <div class="process-grid">
-            <article class="process-step reveal">
-              <span>01</span>
-              <h3>Define</h3>
-              <p>
-                Goal, audience, content, required pages, references,
-                constraints, and scope.
-              </p>
-            </article>
-            <article class="process-step reveal">
-              <span>02</span>
-              <h3>Design</h3>
-              <p>
-                Structure, visual direction, responsive behavior, content
-                hierarchy, and interactions.
-              </p>
-            </article>
-            <article class="process-step reveal">
-              <span>03</span>
-              <h3>Build &amp; test</h3>
-              <p>
-                Implementation, browser checks, responsive QA, accessibility
-                checks, and refinement.
-              </p>
-            </article>
-            <article class="process-step reveal">
-              <span>04</span>
-              <h3>Ship</h3>
-              <p>
-                Final review, deployment, handover, and the agreed post-launch
-                support.
-              </p>
-            </article>
+            <article class="process-step reveal"><span>01</span><h3>Define</h3><p>Goal, audience, content, required pages or screens, references, constraints, and scope.</p></article>
+            <article class="process-step reveal"><span>02</span><h3>Design</h3><p>Structure, visual direction, responsive behavior, content hierarchy, and interactions.</p></article>
+            <article class="process-step reveal"><span>03</span><h3>Build &amp; test</h3><p>Implementation, browser checks, responsive QA, accessibility checks, and refinement.</p></article>
+            <article class="process-step reveal"><span>04</span><h3>Ship</h3><p>Final review, deployment, handover, and the agreed post-launch support.</p></article>
           </div>
         </div>
       </section>
@@ -738,68 +270,17 @@
       <section class="section about" id="about">
         <div class="container about-grid">
           <figure class="portrait reveal" data-tilt>
-            <img
-              src="images/portrait.jpg"
-              alt="Allahverdi Hasanov working at a desk"
-              width="900"
-              height="1125"
-              loading="lazy"
-              decoding="async"
-            />
-            <figcaption>
-              <span>Lankaran, Azerbaijan</span>
-              <span>Available globally</span>
-            </figcaption>
+            <img src="images/portrait.jpg" alt="Allahverdi Hasanov working at a desk" width="900" height="1125" loading="lazy" decoding="async" />
+            <figcaption><span>Lankaran, Azerbaijan</span><span>Available globally</span></figcaption>
           </figure>
-
           <div class="about-copy reveal">
             <span class="section-index">05 / About</span>
-            <h2>I care about the finished product, not tool theatre.</h2>
-            <p class="about-lede">
-              I’m Allahverdi Hasanov, a frontend developer and independent web
-              builder. I work across product structure, UI decisions,
-              implementation, QA, debugging, and deployment.
-            </p>
-            <p>
-              I use modern AI-assisted tools where they speed up research and
-              implementation, but I do not treat generated code as finished
-              work. The value is in defining the right problem, reviewing what
-              gets built, testing it, fixing it, and shipping a coherent
-              experience.
-            </p>
-            <p>
-              Alongside shipping projects, I continue strengthening the web
-              fundamentals that make frontend work reliable: HTML, CSS,
-              JavaScript, accessibility, browser behavior, Git, testing, and
-              application architecture.
-            </p>
-
-            <div
-              class="capability-list"
-              role="group"
-              aria-label="Technical capabilities"
-            >
-              <span>HTML</span><span>CSS</span><span>JavaScript</span
-              ><span>React</span> <span>TypeScript</span
-              ><span>Tailwind CSS</span><span>Git &amp; GitHub</span>
-              <span>REST APIs</span><span>Supabase</span><span>Vitest</span>
-            </div>
-
-            <div class="about-links">
-              <a
-                href="https://github.com/allahverdi-dev"
-                target="_blank"
-                rel="noopener noreferrer"
-                >GitHub ↗</a
-              >
-              <a
-                href="https://www.linkedin.com/in/allahverdi-hasanov/"
-                target="_blank"
-                rel="noopener noreferrer"
-                >LinkedIn ↗</a
-              >
-              <a href="mailto:allahverdihesenov42@gmail.com">Email ↗</a>
-            </div>
+            <h2>I care about what ships and how well it works.</h2>
+            <p class="about-lede">I’m Allahverdi Hasanov, a frontend developer and independent web builder. I work across product structure, UI decisions, implementation, QA, debugging, and deployment.</p>
+            <p>I build both focused business websites and larger product interfaces. My work is guided by the same priorities: clear hierarchy, responsive behavior, maintainable implementation, and a finished experience that feels deliberate.</p>
+            <p>I use modern development tools where they improve speed, but delivered work is reviewed, tested, debugged, and refined before handover.</p>
+            <div class="capability-list" role="group" aria-label="Technical capabilities"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>React</span><span>TypeScript</span><span>Tailwind CSS</span><span>Git &amp; GitHub</span><span>REST APIs</span><span>Supabase</span><span>Vitest</span></div>
+            <div class="about-links"><a href="https://github.com/allahverdi-dev" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="https://www.linkedin.com/in/allahverdi-hasanov/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="mailto:allahverdihesenov42@gmail.com">Email ↗</a></div>
           </div>
         </div>
       </section>
@@ -809,172 +290,41 @@
           <div class="contact-intro reveal">
             <span class="section-index">06 / Start a project</span>
             <h2>Tell me what needs to be built.</h2>
-            <p>
-              Share the project, goal, approximate scope, and budget. I’ll reply
-              with the most suitable direction rather than forcing every request
-              into the same package.
-            </p>
+            <p>Share the goal, approximate scope, budget, and deadline. I’ll use that to identify the most suitable project direction instead of forcing every request into the same package.</p>
             <div class="contact-meta">
-              <div>
-                <span>Email</span>
-                <a href="mailto:allahverdihesenov42@gmail.com"
-                  >allahverdihesenov42@gmail.com</a
-                >
-              </div>
-              <div>
-                <span>Typical project model</span>
-                <strong>50% upfront · 50% before handover</strong>
-              </div>
+              <div><span>Email</span><a href="mailto:allahverdihesenov42@gmail.com">allahverdihesenov42@gmail.com</a></div>
+              <div><span>Typical project model</span><strong>50% upfront · 50% before handover</strong></div>
             </div>
           </div>
 
           <div class="form-shell reveal">
-            <form
-              id="inquiry-form"
-              action="https://formspree.io/f/xeaqqvjg"
-              method="POST"
-            >
-              <input
-                type="hidden"
-                name="_subject"
-                value="New portfolio project inquiry"
-              />
+            <form id="inquiry-form" action="https://formspree.io/f/xeaqqvjg" method="POST">
+              <input type="hidden" name="_subject" value="New portfolio project inquiry" />
               <div class="form-grid">
-                <label>
-                  <span>Name</span>
-                  <input type="text" name="name" autocomplete="name" required />
-                </label>
-
-                <label>
-                  <span>Email</span>
-                  <input
-                    type="email"
-                    name="email"
-                    autocomplete="email"
-                    required
-                  />
-                </label>
-
-                <label class="full">
-                  <span>Business / project</span>
-                  <input
-                    type="text"
-                    name="business"
-                    autocomplete="organization"
-                  />
-                </label>
-
-                <label>
-                  <span>Project type</span>
-                  <select name="projectType" id="project-type" required>
-                    <option value="">Select one</option>
-                    <option>Launch Page</option>
-                    <option>Business Website</option>
-                    <option>Frontend Upgrade</option>
-                    <option>Web Application</option>
-                    <option>Other</option>
-                  </select>
-                </label>
-
-                <label>
-                  <span>Budget</span>
-                  <select name="budget" required>
-                    <option value="">Select range</option>
-                    <option>$100–250</option>
-                    <option>$250–500</option>
-                    <option>$500–1,000</option>
-                    <option>$1,000+</option>
-                    <option>Not sure yet</option>
-                  </select>
-                </label>
-
-                <label class="full">
-                  <span>Project details</span>
-                  <textarea
-                    name="details"
-                    rows="6"
-                    placeholder="What are you building, who is it for, and what should the website help them do?"
-                    required
-                  ></textarea>
-                </label>
-
-                <label class="full">
-                  <span>Preferred deadline</span>
-                  <input
-                    type="text"
-                    name="deadline"
-                    placeholder="For example: October 2026 or flexible"
-                  />
-                </label>
+                <label><span>Name</span><input type="text" name="name" autocomplete="name" required /></label>
+                <label><span>Email</span><input type="email" name="email" autocomplete="email" required /></label>
+                <label class="full"><span>Business / project</span><input type="text" name="business" autocomplete="organization" /></label>
+                <label><span>Project type</span><select name="projectType" id="project-type" required><option value="">Select one</option><option>Launch Page</option><option>Business Website</option><option>Frontend Upgrade</option><option>Web Application</option><option>Other</option></select></label>
+                <label><span>Budget</span><select name="budget" required><option value="">Select range</option><option>$100–250</option><option>$250–500</option><option>$500–1,000</option><option>$1,000–2,500</option><option>$2,500+</option><option>Not sure yet</option></select></label>
+                <label class="full"><span>Project details</span><textarea name="details" rows="6" placeholder="What are you building, who is it for, and what should the website or product help them do?" required></textarea></label>
+                <label class="full"><span>Preferred deadline</span><input type="text" name="deadline" placeholder="For example: October 2026 or flexible" /></label>
               </div>
-
-              <div class="form-footer">
-                <p id="form-status" role="status" aria-live="polite">
-                  Your inquiry will be sent directly to me.
-                </p>
-                <button class="button button--primary" type="submit">
-                  Send project inquiry
-                </button>
-              </div>
+              <div class="form-footer"><p id="form-status" role="status" aria-live="polite">Your inquiry will be sent directly to me.</p><button class="button button--primary" type="submit">Send project inquiry</button></div>
             </form>
           </div>
         </div>
 
         <div class="container faq-wrap reveal">
-          <details>
-            <summary>How much does a website cost?</summary>
-            <p>
-              Launch pages start at $149, business websites at $349, and
-              frontend upgrade work at $199. Final pricing depends on agreed
-              scope.
-            </p>
-          </details>
-          <details>
-            <summary>How do revisions work?</summary>
-            <p>
-              Two revision rounds are included in the defined website packages.
-              Larger direction or scope changes are quoted separately.
-            </p>
-          </details>
-          <details>
-            <summary>Do you work with AI-assisted tools?</summary>
-            <p>
-              Yes. They support research, implementation, review, and iteration.
-              Delivered work is still reviewed, tested, debugged, and refined
-              before handover.
-            </p>
-          </details>
-          <details>
-            <summary>Can you work with an existing website?</summary>
-            <p>
-              Yes. Frontend Upgrade work is intended for sites that need
-              stronger responsive behavior, clearer UI, layout cleanup,
-              interaction refinement, or performance-focused fixes.
-            </p>
-          </details>
+          <details><summary>How much does a project cost?</summary><p>Launch pages start at $149, business websites at $349, frontend upgrades at $199, and web app or MVP frontend work at $599. Final pricing depends on agreed scope.</p></details>
+          <details><summary>How do revisions work?</summary><p>Two revision rounds are included in the defined website packages. Larger direction or scope changes are quoted separately.</p></details>
+          <details><summary>What kinds of projects are the best fit?</summary><p>Business websites, landing pages, SaaS or dashboard frontends, MVP interfaces, and existing frontend work that needs stronger responsive behavior or UI refinement.</p></details>
+          <details><summary>Can you work with an existing website?</summary><p>Yes. Frontend Upgrade work is intended for sites that need stronger responsive behavior, clearer UI, layout cleanup, interaction refinement, or performance-focused fixes.</p></details>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <div class="container footer-inner">
-        <p>© <span id="year"></span> Allahverdi Hasanov</p>
-        <div>
-          <a
-            href="https://github.com/allahverdi-dev"
-            target="_blank"
-            rel="noopener noreferrer"
-            >GitHub</a
-          >
-          <a
-            href="https://www.linkedin.com/in/allahverdi-hasanov/"
-            target="_blank"
-            rel="noopener noreferrer"
-            >LinkedIn</a
-          >
-          <a href="#top">Back to top ↑</a>
-        </div>
-      </div>
+      <div class="container footer-inner"><p>© <span id="year"></span> Allahverdi Hasanov</p><div><a href="https://github.com/allahverdi-dev" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://www.linkedin.com/in/allahverdi-hasanov/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="#top">Back to top ↑</a></div></div>
     </footer>
 
     <script src="script.js"></script>
