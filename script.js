@@ -31,6 +31,24 @@
     .project-card--jspath .showcase-media {
       background: #111514;
     }
+    .showcase-shell--the22 .showcase-media {
+      aspect-ratio: 16 / 9;
+      background: #0e0d0d;
+    }
+    .showcase-shell--the22 .showcase-media > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      filter: saturate(.88) contrast(1.04);
+    }
+    .showcase-shell--the22 .showcase-media::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background: linear-gradient(180deg, transparent 52%, rgba(16, 7, 8, .34));
+    }
   `;
   document.head.append(portfolioStyle);
 
@@ -145,6 +163,52 @@
       if (match) projectType.value = match.value || match.textContent;
     });
   });
+
+  const originalWork = document.getElementById("work");
+  const starterOffer = document.getElementById("starter-offer");
+
+  if (originalWork && starterOffer && !document.querySelector('[data-case-study="the22"]')) {
+    originalWork.id = "product-work";
+
+    const the22Section = document.createElement("section");
+    the22Section.className = "section flagship";
+    the22Section.id = "work";
+    the22Section.dataset.caseStudy = "the22";
+    the22Section.innerHTML = `
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <span class="section-index">Business website example</span>
+            <h2>The 22 — a restaurant &amp; café website built around reservations.</h2>
+          </div>
+          <p>A realistic portfolio concept showing what the 149 AZN starter direction can become for a hospitality business: clear positioning, menu discovery, atmosphere, location, and an obvious path to reserve.</p>
+        </div>
+        <div class="flagship-grid">
+          <div class="showcase-stage reveal">
+            <a class="showcase-shell showcase-shell--flagship showcase-shell--the22" href="https://github.com/allahverdi-dev/the22lounge" target="_blank" rel="noopener noreferrer" aria-label="Open The 22 project repository (new tab)" data-tilt>
+              <span class="showcase-bar" aria-hidden="true"><span class="showcase-dots"><i></i><i></i><i></i></span><span class="showcase-address">github.com/allahverdi-dev/the22lounge</span><span class="showcase-indicator">↗</span></span>
+              <span class="showcase-media"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaPDCBc2SdnLd2shipWKybNASyuj9BanIpyyYHydhQQp9HDR5pZy9LZdYPcHHaqGnErGB6Exizl04rk_ZyWHyRQ8wpBSIfGBINpscbMUxFmEp1KtsChwMcrdT7nvEfhw9BnzVbrPHPIeVSXE83DLxvXGQ9nTll5L9UxmDa1H81pcn71BnYNEh3SWVWWjnD2qJHby-QKpQcmx592Ej0YyyufiXwCFMiB__u95lLCGLKvknrdGPT5xN-oQ" alt="The 22 premium restaurant and café website concept" width="1280" height="720" loading="lazy" decoding="async" /></span>
+              <span class="showcase-meta"><span>The 22 <span class="showcase-tag">Concept</span></span><span>Restaurant &amp; Café Website <span aria-hidden="true">↗</span></span></span>
+            </a>
+            <p class="showcase-caption">Hospitality · One-page business website concept</p>
+          </div>
+          <div class="flagship-copy reveal">
+            <p class="eyebrow">Restaurant &amp; café · Business website concept</p>
+            <h3>Designed to turn atmosphere and menu interest into reservations and contact.</h3>
+            <p class="flagship-lede">The 22 is a premium one-page hospitality concept with menu discovery, gallery content, reservation flow, location and contact information, a refined mobile navigation system, and responsive behavior hardened for narrow phones and foldable devices.</p>
+            <div class="chip-row"><span>Responsive</span><span>Reservations</span><span>Menu</span><span>Maps</span><span>Foldable-ready</span></div>
+            <div class="inline-links">
+              <a href="https://github.com/allahverdi-dev/the22lounge" target="_blank" rel="noopener noreferrer">Project repository ↗</a>
+              <a href="#contact">Ask for a similar website →</a>
+            </div>
+            <div class="quality-note"><span class="quality-dot"></span><p><strong>Built as a sales example:</strong> this is a portfolio concept, not a claimed client commission. It demonstrates the type of polished hospitality website I can adapt for a real local business.</p></div>
+          </div>
+        </div>
+      </div>
+    `;
+
+    originalWork.parentNode.insertBefore(the22Section, originalWork);
+  }
 
   const revealItems = [...document.querySelectorAll(".reveal")];
 
