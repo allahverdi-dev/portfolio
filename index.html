@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Allahverdi Hasanov — Frontend Developer for Startups &amp; Businesses</title>
+    <title>Allahverdi Hasanov — Small Business Websites &amp; Frontend Development</title>
     <meta
       name="description"
-      content="Frontend developer building polished websites, SaaS interfaces, MVP frontends, and responsive web products for startups, businesses, and personal brands."
+      content="Responsive business websites and polished frontend products by Allahverdi Hasanov. Starter websites for small businesses in Azerbaijan, plus SaaS and MVP frontend work."
     />
     <meta name="color-scheme" content="light dark" />
     <meta name="theme-color" content="#f6f4ef" />
@@ -15,14 +15,14 @@
     <link rel="canonical" href="https://allahverdi-dev.github.io/portfolio/" />
 
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Allahverdi Hasanov — Frontend Developer for Startups &amp; Businesses" />
-    <meta property="og:description" content="Websites and product frontends built for real use — responsive, focused, tested, and ready to ship." />
+    <meta property="og:title" content="Allahverdi Hasanov — Small Business Websites &amp; Frontend Development" />
+    <meta property="og:description" content="Fast, responsive websites for small businesses, plus polished SaaS and MVP frontends." />
     <meta property="og:url" content="https://allahverdi-dev.github.io/portfolio/" />
     <meta property="og:image" content="https://allahverdi-dev.github.io/portfolio/images/projects/movane-cover.webp" />
     <meta property="og:image:alt" content="MOVANE supply chain control tower interface" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Allahverdi Hasanov — Frontend Developer" />
-    <meta name="twitter:description" content="Websites, SaaS interfaces, and MVP frontends for startups and businesses." />
+    <meta name="twitter:description" content="Business websites, responsive frontend work, and product interfaces." />
     <meta name="twitter:image" content="https://allahverdi-dev.github.io/portfolio/images/projects/movane-cover.webp" />
 
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
@@ -37,6 +37,9 @@
       .service-grid { grid-template-columns: repeat(2, 1fr); }
       .service-card:nth-child(2n) { border-right: 0; }
       .service-card:nth-child(-n + 2) { border-bottom: 1px solid var(--line); }
+      .starter-card { grid-column: 1 / -1; }
+      .starter-card .price span { display: block; }
+      .starter-note { margin-top: 1rem; color: var(--faint); }
       @media (max-width: 980px) {
         .service-grid { grid-template-columns: 1fr; }
         .service-card, .service-card:nth-child(2n) { border-right: 0; border-bottom: 1px solid var(--line); }
@@ -55,7 +58,7 @@
           "https://github.com/allahverdi-dev",
           "https://www.linkedin.com/in/allahverdi-hasanov/"
         ],
-        "knowsAbout": ["Frontend Development", "React", "TypeScript", "Responsive Web Design", "Web Applications"]
+        "knowsAbout": ["Business Websites", "Frontend Development", "React", "TypeScript", "Responsive Web Design", "Web Applications"]
       }
     </script>
 
@@ -105,35 +108,62 @@
       <section class="hero">
         <div class="container hero-grid">
           <div class="hero-copy reveal">
-            <p class="availability"><span></span> Available for freelance &amp; remote projects</p>
-            <h1>I build websites and product frontends that make the next action <em>obvious.</em></h1>
-            <p class="hero-lede">For startups, businesses, and personal brands that need a polished interface — responsive, accessible, focused, and ready to ship.</p>
+            <p class="availability"><span></span> Taking on 3 local business websites at a starter rate</p>
+            <h1>I build websites that make your business easier to <em>trust</em> and easier to contact.</h1>
+            <p class="hero-lede">Fast, responsive websites for small businesses in Azerbaijan — plus polished product frontends for startups and teams.</p>
             <div class="hero-actions">
-              <a class="button button--primary" href="#contact">Start a project</a>
-              <a class="button button--ghost" href="#work">See what I build</a>
+              <a class="button button--primary" href="#starter-offer">See the 149 AZN offer</a>
+              <a class="button button--ghost" href="#work">See selected work</a>
             </div>
           </div>
-          <aside class="hero-proof reveal" aria-label="Professional summary">
-            <p class="mono-label">Best fit for</p>
-            <div class="proof-row"><span>01</span><strong>SaaS &amp; MVP frontends</strong></div>
-            <div class="proof-row"><span>02</span><strong>Business websites</strong></div>
-            <div class="proof-row"><span>03</span><strong>Frontend upgrades</strong></div>
-            <p class="proof-location">Lankaran, Azerbaijan · Working globally</p>
+          <aside class="hero-proof reveal" aria-label="Starter offer summary">
+            <p class="mono-label">Local starter offer</p>
+            <div class="proof-row"><span>01</span><strong>1-page business website · 149 AZN</strong></div>
+            <div class="proof-row"><span>02</span><strong>3–5 work days after content</strong></div>
+            <div class="proof-row"><span>03</span><strong>50% to start · 50% on handover</strong></div>
+            <p class="proof-location">Lankaran, Azerbaijan · Serving Azerbaijan + remote clients</p>
           </aside>
         </div>
       </section>
 
-      <section class="proof-strip" aria-label="Capabilities">
+      <section class="proof-strip" aria-label="Business website inclusions">
         <div class="container proof-strip-inner">
-          <span>Responsive by default</span><span>Accessible UI</span><span>Performance-aware</span><span>Clear scope</span><span>Deployment included</span>
+          <span>Mobile-ready</span><span>Contact-focused</span><span>Basic SEO</span><span>Map + social links</span><span>Deployment included</span>
+        </div>
+      </section>
+
+      <section class="section services" id="starter-offer">
+        <div class="container">
+          <div class="section-heading reveal">
+            <div><span class="section-index">Starter offer</span><h2>A clear first website for a small business.</h2></div>
+            <p>No large agency package. A focused site that explains what you do, builds credibility, and gives customers an obvious way to contact you.</p>
+          </div>
+          <div class="service-grid">
+            <article class="service-card service-card--featured starter-card reveal">
+              <div class="service-top"><span class="service-number">01</span><p class="mono-label">First 3 paid local clients</p></div>
+              <h3>Business Starter Website</h3>
+              <p>Best for salons, barbers, clinics, cafés, restaurants, tutors, photographers, service businesses, and local brands that need a professional web presence without a large build.</p>
+              <p class="price"><span>Limited starter rate</span>149 AZN</p>
+              <ul>
+                <li>1 responsive page with up to 6 focused sections</li>
+                <li>WhatsApp, phone, Instagram and other contact links</li>
+                <li>Google Maps integration</li>
+                <li>Basic technical SEO, metadata and favicon setup</li>
+                <li>Image optimisation and deployment</li>
+                <li>1 revision round + 7 days of technical bug support</li>
+              </ul>
+              <p class="starter-note">Client provides logo, business text, service list, contact details, and main images. Domain and paid hosting costs are separate. After the first 3 paid clients, this package moves to a minimum of 249 AZN.</p>
+              <a class="button button--primary service-cta" href="#contact" data-project="Business Starter Website">Ask about the starter offer</a>
+            </article>
+          </div>
         </div>
       </section>
 
       <section class="section flagship" id="work">
         <div class="container">
           <div class="section-heading reveal">
-            <div><span class="section-index">01 / Flagship</span><h2>MOVANE — supply chain operations, built as a real product.</h2></div>
-            <p>My most complete enterprise frontend project — built around operational workflows, simulation, data-heavy interfaces, and backend-ready architecture.</p>
+            <div><span class="section-index">01 / Capability</span><h2>Simple business sites when that is enough. Complex product frontends when it is not.</h2></div>
+            <p>The starter offer is intentionally focused. The work below shows the level of frontend complexity I can handle beyond a small business website.</p>
           </div>
           <div class="flagship-grid">
             <div class="showcase-stage reveal">
@@ -146,8 +176,8 @@
             </div>
             <div class="flagship-copy reveal">
               <p class="eyebrow">Enterprise operations · Frontend product</p>
-              <h3>One operational view of shipments, suppliers, inventory, risk and disruption.</h3>
-              <p class="flagship-lede">MOVANE is an enterprise supply chain control tower covering shipment operations, supplier dependencies, warehouses, inventory, exceptions, risk, route intelligence, cold-chain monitoring and public tracking. Its Scenario Lab can simulate disruptions and compare operational impact before and after mitigation.</p>
+              <h3>A complex interface built around real operational workflows.</h3>
+              <p class="flagship-lede">MOVANE brings shipments, suppliers, warehouses, inventory, exceptions, risk, route intelligence, cold-chain monitoring and disruption simulation into one frontend system.</p>
               <div class="metric-grid" role="group" aria-label="MOVANE product metrics">
                 <div><strong>47</strong><span>Routes</span></div><div><strong>620</strong><span>Shipments</span></div><div><strong>154</strong><span>Tests</span></div><div><strong>14</strong><span>QA widths</span></div>
               </div>
@@ -156,7 +186,6 @@
                 <a href="https://movane.vercel.app" target="_blank" rel="noopener noreferrer">Live demo ↗</a>
                 <a href="https://verdihesenov.gumroad.com/l/movane-supply-chain-control-tower" target="_blank" rel="noopener noreferrer">View product ↗</a>
               </div>
-              <div class="quality-note"><span class="quality-dot"></span><p><strong>Built for depth:</strong> deterministic demo data, local persistence, Scenario Lab, responsive product shell, automated testing, and repository interfaces ready for a real backend.</p></div>
             </div>
           </div>
         </div>
@@ -165,8 +194,8 @@
       <section class="section selected-work">
         <div class="container">
           <div class="section-heading reveal">
-            <div><span class="section-index">02 / Selected work</span><h2>Different products. The same focus on usable interfaces.</h2></div>
-            <p>Shipped work across SaaS, education, finance, discovery, and product interfaces — from focused web apps to larger frontend systems.</p>
+            <div><span class="section-index">02 / Selected work</span><h2>Different products. The same focus on clear, usable interfaces.</h2></div>
+            <p>Selected work across SaaS, education, finance and web applications.</p>
           </div>
 
           <div class="project-list">
@@ -176,7 +205,7 @@
                 <span class="showcase-media" style="background:#0b0c0d"><img src="images/projects/krenos-cover.jpg" alt="KRENOS premium SaaS frontend kit cover" width="960" height="960" loading="lazy" decoding="async" style="object-fit:contain" /></span>
                 <span class="showcase-meta"><span>KRENOS</span><span>11 SaaS interfaces <span aria-hidden="true">↗</span></span></span>
               </a>
-              <div class="project-copy"><div class="project-number">01</div><div><p class="eyebrow">SaaS UI kit · Frontend system</p><h3>KRENOS</h3><p>A premium React frontend kit with eleven complete SaaS interfaces — six marketing templates and five product experiences — built on one responsive design system with motion, accessibility, strict TypeScript, testing, and production-focused QA.</p><div class="chip-row"><span>React</span><span>TypeScript</span><span>Vite</span><span>Tailwind CSS</span></div><div class="inline-links"><a href="https://krenos-ten.vercel.app/" target="_blank" rel="noopener noreferrer">Live demo ↗</a><a href="https://krenos-ten.vercel.app/templates" target="_blank" rel="noopener noreferrer">Browse 11 interfaces ↗</a></div></div></div>
+              <div class="project-copy"><div class="project-number">01</div><div><p class="eyebrow">SaaS UI kit · Frontend system</p><h3>KRENOS</h3><p>A premium React frontend kit with eleven complete SaaS interfaces, responsive behavior, motion, accessibility, strict TypeScript, testing, and production-focused QA.</p><div class="chip-row"><span>React</span><span>TypeScript</span><span>Vite</span><span>Tailwind CSS</span></div><div class="inline-links"><a href="https://krenos-ten.vercel.app/" target="_blank" rel="noopener noreferrer">Live demo ↗</a><a href="https://krenos-ten.vercel.app/templates" target="_blank" rel="noopener noreferrer">Browse interfaces ↗</a></div></div></div>
             </article>
 
             <article class="project-card project-card--jspath reveal" data-project="jspath">
@@ -190,7 +219,7 @@
                 </div>
                 <span class="showcase-meta"><span>JSPath</span><span>JavaScript learning platform <span aria-hidden="true">↗</span></span></span>
               </a>
-              <div class="project-copy"><div class="project-number">02</div><div><p class="eyebrow">EdTech · Learning platform</p><h3>JSPath</h3><p>A comprehensive JavaScript learning product combining structured lessons, executable examples, exercises, challenges, projects, interview preparation, progress systems, and an in-browser coding environment.</p><div class="chip-row"><span>React</span><span>Vite</span><span>Monaco Editor</span><span>Supabase</span></div><div class="inline-links"><a href="https://jspath.vercel.app" target="_blank" rel="noopener noreferrer">Live product ↗</a><a href="https://github.com/allahverdi-dev/jspath" target="_blank" rel="noopener noreferrer">Repository ↗</a></div></div></div>
+              <div class="project-copy"><div class="project-number">02</div><div><p class="eyebrow">EdTech · Learning platform</p><h3>JSPath</h3><p>A comprehensive JavaScript learning platform with structured lessons, exercises, challenges, projects, interview preparation, progress systems, and an in-browser coding environment.</p><div class="chip-row"><span>React</span><span>Vite</span><span>Monaco Editor</span><span>Supabase</span></div><div class="inline-links"><a href="https://jspath.vercel.app" target="_blank" rel="noopener noreferrer">Live product ↗</a><a href="https://github.com/allahverdi-dev/jspath" target="_blank" rel="noopener noreferrer">Repository ↗</a></div></div></div>
             </article>
 
             <article class="project-card reveal">
@@ -210,15 +239,6 @@
               </a>
               <div class="project-copy"><div class="project-number">04</div><div><p class="eyebrow">Finance · Local-first web app</p><h3>Finora</h3><p>A privacy-first personal finance dashboard for transactions, budgets, recurring payments, savings goals, analytics, and portable data.</p><div class="chip-row"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>IndexedDB</span></div><div class="inline-links"><a href="https://allahverdi-dev.github.io/finora/" target="_blank" rel="noopener noreferrer">Live product ↗</a><a href="https://github.com/allahverdi-dev/finora" target="_blank" rel="noopener noreferrer">Repository ↗</a></div></div></div>
             </article>
-
-            <article class="project-card reveal">
-              <a class="showcase-shell showcase-shell--cinescope" aria-label="Open CineScope (new tab)" href="https://cinescope.allahverdihesenov42.workers.dev/" target="_blank" rel="noopener noreferrer" data-tilt>
-                <span class="showcase-bar" aria-hidden="true"><span class="showcase-dots"><i></i><i></i><i></i></span><span class="showcase-address">cinescope.allahverdihesenov42.workers.dev</span><span class="showcase-indicator">↗</span></span>
-                <span class="showcase-media"><img src="images/projects/cinescope-cover.jpg" alt="CineScope movie discovery interface" width="1600" height="1000" loading="lazy" decoding="async" /></span>
-                <span class="showcase-meta"><span>CineScope</span><span>Movie discovery <span aria-hidden="true">↗</span></span></span>
-              </a>
-              <div class="project-copy"><div class="project-number">05</div><div><p class="eyebrow">Entertainment · Web application</p><h3>CineScope</h3><p>A cinematic movie discovery experience with trending titles, search, filtering, detailed movie pages, trailers, and a personal watchlist.</p><div class="chip-row"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>TMDB API</span></div><div class="inline-links"><a href="https://cinescope.allahverdihesenov42.workers.dev/" target="_blank" rel="noopener noreferrer">Live product ↗</a><a href="https://github.com/allahverdi-dev/cinescope" target="_blank" rel="noopener noreferrer">Repository ↗</a></div></div></div>
-            </article>
           </div>
         </div>
       </section>
@@ -226,52 +246,52 @@
       <section class="section services" id="services">
         <div class="container">
           <div class="section-heading reveal">
-            <div><span class="section-index">03 / Services</span><h2>Clear ways to work together.</h2></div>
-            <p>Start with the outcome you need. Scope, timeline, and final quote are agreed before implementation begins.</p>
+            <div><span class="section-index">03 / Services</span><h2>Start small when the problem is small. Scale the scope when it is not.</h2></div>
+            <p>Each project starts with a defined scope, timeline, and price. No hidden feature list and no vague handover.</p>
           </div>
 
           <div class="service-grid">
-            <article class="service-card reveal">
-              <div class="service-top"><span class="service-number">01</span><p class="mono-label">Single-page launch</p></div>
-              <h3>Launch Page</h3><p>For a product, service, campaign, creator, or personal brand that needs one strong conversion-focused page.</p><p class="price"><span>From</span> $149</p>
-              <ul><li>Responsive single-page build</li><li>Clear CTA and section hierarchy</li><li>Basic SEO and metadata</li><li>Contact/form integration</li><li>Deployment + 2 revision rounds</li></ul>
-              <a class="button button--ghost service-cta" href="#contact" data-project="Launch Page">Discuss a launch page</a>
-            </article>
-
-            <article class="service-card reveal">
-              <div class="service-top"><span class="service-number">02</span><p class="mono-label">Business presence</p></div>
-              <h3>Business Website</h3><p>For a business that needs a professional online presence with clearer information, stronger mobile UX, and a direct path to inquiry.</p><p class="price"><span>From</span> $349</p>
-              <ul><li>Up to 5 responsive pages</li><li>Tailored interface direction</li><li>Contact and social integrations</li><li>Basic on-page SEO</li><li>Deployment + 2 revision rounds</li></ul>
-              <a class="button button--ghost service-cta" href="#contact" data-project="Business Website">Discuss a business site</a>
-            </article>
-
             <article class="service-card service-card--featured reveal">
-              <div class="service-top"><span class="service-number">03</span><p class="mono-label">Startup &amp; product</p></div>
-              <h3>Web App / MVP Frontend</h3><p>For founders and teams that need a polished frontend for a SaaS product, dashboard, MVP, internal tool, or product prototype.</p><p class="price"><span>From</span> $599</p>
-              <ul><li>React / TypeScript implementation</li><li>Responsive product UI</li><li>Reusable component structure</li><li>API-ready frontend boundaries</li><li>Testing and deployment support</li></ul>
-              <a class="button button--primary service-cta" href="#contact" data-project="Web Application">Discuss a product frontend</a>
+              <div class="service-top"><span class="service-number">01</span><p class="mono-label">Small business</p></div>
+              <h3>Business Starter Website</h3><p>For a local business that needs a professional one-page website with a direct path to contact.</p><p class="price"><span>First 3 clients</span>149 AZN</p>
+              <ul><li>1 page · up to 6 sections</li><li>Mobile, tablet and desktop responsive</li><li>Contact, social and map integrations</li><li>Basic technical SEO</li><li>Deployment + 1 revision round</li></ul>
+              <a class="button button--primary service-cta" href="#contact" data-project="Business Starter Website">Start with the 149 AZN offer</a>
             </article>
 
             <article class="service-card reveal">
-              <div class="service-top"><span class="service-number">04</span><p class="mono-label">Existing product</p></div>
-              <h3>Frontend Upgrade</h3><p>For an existing website or product that feels dated, weak on mobile, inconsistent, slow, or difficult to use.</p><p class="price"><span>From</span> $199</p>
-              <ul><li>UI and responsive improvements</li><li>Layout and component cleanup</li><li>Interaction refinement</li><li>Performance-focused fixes</li><li>Scope agreed before implementation</li></ul>
+              <div class="service-top"><span class="service-number">02</span><p class="mono-label">Larger business presence</p></div>
+              <h3>Custom Business Website</h3><p>For a business that needs multiple pages, more content, stronger structure, and a more tailored interface.</p><p class="price"><span>From</span>349 AZN</p>
+              <ul><li>Up to 5 responsive pages</li><li>Tailored visual direction</li><li>Contact and social integrations</li><li>Basic on-page SEO</li><li>Deployment + 2 revision rounds</li></ul>
+              <a class="button button--ghost service-cta" href="#contact" data-project="Custom Business Website">Discuss a larger business site</a>
+            </article>
+
+            <article class="service-card reveal">
+              <div class="service-top"><span class="service-number">03</span><p class="mono-label">Existing website</p></div>
+              <h3>Frontend Upgrade</h3><p>For an existing site that feels dated, weak on mobile, inconsistent, slow, or difficult to use.</p><p class="price"><span>From</span>199 AZN</p>
+              <ul><li>Responsive and UI improvements</li><li>Layout and component cleanup</li><li>Interaction refinement</li><li>Performance-focused fixes</li><li>Scope agreed before implementation</li></ul>
               <a class="button button--ghost service-cta" href="#contact" data-project="Frontend Upgrade">Improve an existing frontend</a>
+            </article>
+
+            <article class="service-card reveal">
+              <div class="service-top"><span class="service-number">04</span><p class="mono-label">Startup &amp; product</p></div>
+              <h3>Web App / MVP Frontend</h3><p>For founders and teams that need a polished frontend for a SaaS product, dashboard, MVP, internal tool, or product prototype.</p><p class="price"><span>Scope-based</span>Custom quote</p>
+              <ul><li>React / TypeScript implementation</li><li>Responsive product UI</li><li>Reusable component structure</li><li>API-ready frontend boundaries</li><li>Testing and deployment support</li></ul>
+              <a class="button button--ghost service-cta" href="#contact" data-project="Web Application">Discuss a product frontend</a>
             </article>
           </div>
 
-          <div class="included-bar reveal"><span>Every project includes</span><div><strong>Mobile-first QA</strong><strong>Accessibility basics</strong><strong>Performance review</strong><strong>Deployment support</strong></div></div>
+          <div class="included-bar reveal"><span>Every project includes</span><div><strong>Responsive QA</strong><strong>Clear scope</strong><strong>Deployment support</strong><strong>Handover</strong></div></div>
         </div>
       </section>
 
       <section class="section process">
         <div class="container">
-          <div class="section-heading reveal"><div><span class="section-index">04 / Process</span><h2>A short path from idea to shipped product.</h2></div><p>No mystery process. Scope first, implementation second, launch after validation.</p></div>
+          <div class="section-heading reveal"><div><span class="section-index">04 / Process</span><h2>A short path from first message to live website.</h2></div><p>You do not need a technical brief. I need the business goal, content, references, and a clear decision-maker.</p></div>
           <div class="process-grid">
-            <article class="process-step reveal"><span>01</span><h3>Define</h3><p>Goal, audience, content, required pages or screens, references, constraints, and scope.</p></article>
-            <article class="process-step reveal"><span>02</span><h3>Design</h3><p>Structure, visual direction, responsive behavior, content hierarchy, and interactions.</p></article>
-            <article class="process-step reveal"><span>03</span><h3>Build &amp; test</h3><p>Implementation, browser checks, responsive QA, accessibility checks, and refinement.</p></article>
-            <article class="process-step reveal"><span>04</span><h3>Ship</h3><p>Final review, deployment, handover, and the agreed post-launch support.</p></article>
+            <article class="process-step reveal"><span>01</span><h3>Define</h3><p>Goal, audience, pages or sections, content, references, deadline, and final scope.</p></article>
+            <article class="process-step reveal"><span>02</span><h3>Start</h3><p>50% upfront after the scope is agreed. Content and required assets are collected before the build begins.</p></article>
+            <article class="process-step reveal"><span>03</span><h3>Build &amp; review</h3><p>Responsive implementation, browser checks, refinement, and the included revision round.</p></article>
+            <article class="process-step reveal"><span>04</span><h3>Ship</h3><p>Final 50%, deployment, handover, and the agreed post-launch technical support.</p></article>
           </div>
         </div>
       </section>
@@ -280,13 +300,13 @@
         <div class="container about-grid">
           <figure class="portrait reveal" data-tilt>
             <img src="images/portrait.jpg" alt="Allahverdi Hasanov working at a desk" width="900" height="1125" loading="lazy" decoding="async" />
-            <figcaption><span>Lankaran, Azerbaijan</span><span>Available globally</span></figcaption>
+            <figcaption><span>Lankaran, Azerbaijan</span><span>Available for local + remote work</span></figcaption>
           </figure>
           <div class="about-copy reveal">
             <span class="section-index">05 / About</span>
-            <h2>I care about what ships and how well it works.</h2>
-            <p class="about-lede">I’m Allahverdi Hasanov, a frontend developer and independent web builder. I work across product structure, UI decisions, implementation, QA, debugging, and deployment.</p>
-            <p>I build both focused business websites and larger product interfaces. My work is guided by the same priorities: clear hierarchy, responsive behavior, maintainable implementation, and a finished experience that feels deliberate.</p>
+            <h2>I build the amount of frontend the problem actually needs.</h2>
+            <p class="about-lede">I’m Allahverdi Hasanov, a frontend developer and independent web builder based in Lankaran, Azerbaijan.</p>
+            <p>For small businesses, that can mean a focused one-page website that makes services, contact details, location, and the next action clear. For larger products, I work across structure, UI decisions, React/TypeScript implementation, QA, debugging, and deployment.</p>
             <p>I use modern development tools where they improve speed, but delivered work is reviewed, tested, debugged, and refined before handover.</p>
             <div class="capability-list" role="group" aria-label="Technical capabilities"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>React</span><span>TypeScript</span><span>Tailwind CSS</span><span>Git &amp; GitHub</span><span>REST APIs</span><span>Supabase</span><span>Vitest</span></div>
             <div class="about-links"><a href="https://github.com/allahverdi-dev" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="https://www.linkedin.com/in/allahverdi-hasanov/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="mailto:allahverdihesenov42@gmail.com">Email ↗</a></div>
@@ -298,11 +318,11 @@
         <div class="container contact-grid">
           <div class="contact-intro reveal">
             <span class="section-index">06 / Start a project</span>
-            <h2>Tell me what needs to be built.</h2>
-            <p>Share the goal, approximate scope, budget, and deadline. I’ll use that to identify the most suitable project direction instead of forcing every request into the same package.</p>
+            <h2>Tell me about the business, not the technology.</h2>
+            <p>If you are a small business owner, tell me what you do, what customers should do next, and share your current Instagram page or website if you have one. I can work out the appropriate web scope from there.</p>
             <div class="contact-meta">
               <div><span>Email</span><a href="mailto:allahverdihesenov42@gmail.com">allahverdihesenov42@gmail.com</a></div>
-              <div><span>Typical project model</span><strong>50% upfront · 50% before handover</strong></div>
+              <div><span>Payment model</span><strong>50% upfront · 50% before handover</strong></div>
             </div>
           </div>
 
@@ -313,9 +333,9 @@
                 <label><span>Name</span><input type="text" name="name" autocomplete="name" required /></label>
                 <label><span>Email</span><input type="email" name="email" autocomplete="email" required /></label>
                 <label class="full"><span>Business / project</span><input type="text" name="business" autocomplete="organization" /></label>
-                <label><span>Project type</span><select name="projectType" id="project-type" required><option value="">Select one</option><option>Launch Page</option><option>Business Website</option><option>Frontend Upgrade</option><option>Web Application</option><option>Other</option></select></label>
-                <label><span>Budget</span><select name="budget" required><option value="">Select range</option><option>$100–250</option><option>$250–500</option><option>$500–1,000</option><option>$1,000–2,500</option><option>$2,500+</option><option>Not sure yet</option></select></label>
-                <label class="full"><span>Project details</span><textarea name="details" rows="6" placeholder="What are you building, who is it for, and what should the website or product help them do?" required></textarea></label>
+                <label><span>Project type</span><select name="projectType" id="project-type" required><option value="">Select one</option><option>Business Starter Website</option><option>Custom Business Website</option><option>Frontend Upgrade</option><option>Web Application</option><option>Other</option></select></label>
+                <label><span>Budget</span><select name="budget" required><option value="">Select range</option><option>149 AZN starter offer</option><option>Up to 300 AZN</option><option>300–600 AZN</option><option>600–1,000 AZN</option><option>1,000+ AZN</option><option>International / USD budget</option><option>Not sure yet</option></select></label>
+                <label class="full"><span>Project details</span><textarea name="details" rows="6" placeholder="What does your business do, who are your customers, and what should the website help them do?" required></textarea></label>
                 <label class="full"><span>Preferred deadline</span><input type="text" name="deadline" placeholder="For example: October 2026 or flexible" /></label>
               </div>
               <div class="form-footer"><p id="form-status" role="status" aria-live="polite">Your inquiry will be sent directly to me.</p><button class="button button--primary" type="submit">Send project inquiry</button></div>
@@ -324,10 +344,10 @@
         </div>
 
         <div class="container faq-wrap reveal">
-          <details><summary>How much does a project cost?</summary><p>Launch pages start at $149, business websites at $349, frontend upgrades at $199, and web app or MVP frontend work at $599. Final pricing depends on agreed scope.</p></details>
-          <details><summary>How do revisions work?</summary><p>Two revision rounds are included in the defined website packages. Larger direction or scope changes are quoted separately.</p></details>
-          <details><summary>What kinds of projects are the best fit?</summary><p>Business websites, landing pages, SaaS or dashboard frontends, MVP interfaces, and existing frontend work that needs stronger responsive behavior or UI refinement.</p></details>
-          <details><summary>Can you work with an existing website?</summary><p>Yes. Frontend Upgrade work is intended for sites that need stronger responsive behavior, clearer UI, layout cleanup, interaction refinement, or performance-focused fixes.</p></details>
+          <details><summary>What is the 149 AZN starter offer?</summary><p>It is a limited rate for my first 3 paid local business clients: one responsive page with up to 6 sections, contact and social links, Google Maps, basic technical SEO, deployment, one revision round, and 7 days of technical bug support. After those first 3 clients, the minimum price becomes 249 AZN.</p></details>
+          <details><summary>What is not included in the starter offer?</summary><p>Domain and paid hosting costs, admin panels, backend systems, databases, e-commerce, booking systems, online payments, professional copywriting, logo design, and photo or video production are quoted separately or supplied by the client.</p></details>
+          <details><summary>How do revisions work?</summary><p>The starter package includes one defined revision round. Larger business website packages include two. New features or significant scope changes are quoted separately.</p></details>
+          <details><summary>What kinds of projects are the best fit?</summary><p>Small business websites, landing pages, frontend upgrades, SaaS or dashboard frontends, MVP interfaces, and existing frontend work that needs stronger responsive behavior or UI refinement.</p></details>
         </div>
       </section>
     </main>
